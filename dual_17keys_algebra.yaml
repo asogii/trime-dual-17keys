@@ -1,0 +1,53 @@
+# SPDX-FileCopyrightText: 2015 - 2026 Rime community
+#
+# SPDX-License-Identifier: GPL-3.0-or-later
+
+# Rime algebra sidecar for dual_17keys.trime.yaml
+# encoding: utf-8
+#
+# 接入到目标方案的 *.custom.yaml 时，只需要在现有的
+# patch/speller/algebra/__patch 列表末尾追加：
+#
+#   - dual_17keys_algebra:/common/latin_26
+#
+# 例如 wanxiang_pro.custom.yaml：
+#
+# patch:
+#   speller/algebra:
+#     __patch:
+#       - wanxiang_algebra:/pro/小鹤双拼
+#       - wanxiang_algebra:/pro/直接辅助
+#       - dual_17keys_algebra:/common/latin_26
+#
+# 如果将来某个方案需要额外规则，再在该方案的 *.custom.yaml 中继续追加：
+#
+#   - dual_17keys_algebra:/schemes/<schema_id>
+#
+# 设计约束：
+# 1. common/latin_26 只承载“输入字母表是 26 个小写字母”的通用双键 derive。
+# 2. schemes/<schema_id> 只承载某个输入方案额外需要的 derive。
+# 3. sidecar 节点内部统一使用 __append，避免接管目标方案已有的 algebra。
+
+common:
+  latin_26:
+    __append:
+      - derive/w/W/
+      - derive/e/W/
+      - derive/r/R/
+      - derive/t/R/
+      - derive/u/U/
+      - derive/y/U/
+      - derive/i/I/
+      - derive/o/I/
+      - derive/s/S/
+      - derive/d/S/
+      - derive/f/F/
+      - derive/g/F/
+      - derive/j/J/
+      - derive/k/J/
+      - derive/x/X/
+      - derive/c/X/
+      - derive/b/B/
+      - derive/n/B/
+
+schemes: {}
