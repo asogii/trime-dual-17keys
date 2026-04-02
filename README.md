@@ -38,8 +38,6 @@ common:
 如果你只是想直接下载使用，可以先从 release 获取文件：
 
 - 整包下载（推荐）：[trime-dual-17keys-v0.1.0.zip](https://github.com/nextzhou/trime-dual-17keys/releases/download/v0.1.0/trime-dual-17keys-v0.1.0.zip)
-- 单独下载主题文件：[dual_17keys.trime.yaml](https://github.com/nextzhou/trime-dual-17keys/releases/download/v0.1.0/dual_17keys.trime.yaml)
-- 单独下载 algebra 文件：[dual_17keys_algebra.yaml](https://github.com/nextzhou/trime-dual-17keys/releases/download/v0.1.0/dual_17keys_algebra.yaml)
 - 发布页：[Releases](https://github.com/nextzhou/trime-dual-17keys/releases)
 
 1. 将 [`dual_17keys.trime.yaml`](./dual_17keys.trime.yaml) 放到同文输入法（Trime）/ Rime 用户目录。
@@ -58,6 +56,32 @@ patch:
 ```
 
 如果目标方案本来已经在 `__patch` 里引用了其他 algebra 预设，也请保留原有条目，再把 `dual_17keys_algebra:/common/latin_26` 追加到末尾。
+
+## 推荐工具：trime-cli
+
+如果你想在电脑上先检查配置是否可用，再决定是否放到手机里测试，推荐配合 [`trime-cli`](https://github.com/nextzhou/trime-cli) 一起使用。
+
+`trime-cli` 是一个独立发布的命令行工具，可以直接对 `*.trime.yaml` 做这些事：
+
+- 校验配置是否存在潜在问题
+- 渲染所有键盘的预览图
+- 生成一个可直接打开的 `report.html` 报告，便于整体检查布局、配色和切换关系
+
+常用命令示例：
+
+```bash
+java -jar trime-cli-all.jar validate dual_17keys.trime.yaml
+java -jar trime-cli-all.jar render dual_17keys.trime.yaml -o /tmp/dual-17keys-render
+java -jar trime-cli-all.jar report dual_17keys.trime.yaml -o report.html
+```
+
+下载地址：
+
+- 项目主页：<https://github.com/nextzhou/trime-cli>
+- 最新 release：<https://github.com/nextzhou/trime-cli/releases/latest>
+- 直接下载：<https://github.com/nextzhou/trime-cli/releases/latest/download/trime-cli-all.jar>
+
+当前仓库的 CI 也已经使用 `trime-cli latest` 自动执行校验，并上传生成的 `report.html` 作为 job artifact，方便直接查看效果。
 
 ## `rime_wanxiang` 额外配置
 
@@ -126,7 +150,7 @@ patch:
 
 ![中文符号键盘](./images/keyboard_symbols_default.png)
 
-完整渲染图在 [`images/`](./images/) 目录下，使用 Trime CLI 按 `1080 x density 2.75` 生成。
+完整渲染图在 [`images/`](./images/) 目录下，使用 [`trime-cli`](https://github.com/nextzhou/trime-cli) 按 `1080 x density 2.75` 生成。
 
 ## 仓库内容
 
