@@ -1,6 +1,6 @@
 # trime-dual-17keys
 
-一个面向 Trime 的 17 键双键皮肤。
+一个面向同文输入法（Trime）的 17 键双键皮肤。
 
 这套皮肤本身是通用的，不绑定某个具体输入方案。只要目标方案的 `speller/alphabet` 使用 26 个小写字母，就可以接入仓库中的 [`dual_17keys_algebra.yaml`](./dual_17keys_algebra.yaml)。
 
@@ -34,9 +34,16 @@ common:
 
 ## 安装
 
-1. 将 [`dual_17keys.trime.yaml`](./dual_17keys.trime.yaml) 放到 Trime / Rime 用户目录。
+如果你只是想直接下载使用，可以先从 release 获取文件：
+
+- 整包下载（推荐）：[trime-dual-17keys-v0.1.0.zip](https://github.com/nextzhou/trime-dual-17keys/releases/download/v0.1.0/trime-dual-17keys-v0.1.0.zip)
+- 单独下载主题文件：[dual_17keys.trime.yaml](https://github.com/nextzhou/trime-dual-17keys/releases/download/v0.1.0/dual_17keys.trime.yaml)
+- 单独下载 algebra 文件：[dual_17keys_algebra.yaml](https://github.com/nextzhou/trime-dual-17keys/releases/download/v0.1.0/dual_17keys_algebra.yaml)
+- 发布页：[Releases](https://github.com/nextzhou/trime-dual-17keys/releases)
+
+1. 将 [`dual_17keys.trime.yaml`](./dual_17keys.trime.yaml) 放到同文输入法（Trime）/ Rime 用户目录。
 2. 将 [`dual_17keys_algebra.yaml`](./dual_17keys_algebra.yaml) 放到同一目录。
-3. 在 Trime 中选择这个主题。
+3. 在同文输入法（Trime）中选择这个主题。
 4. 在你实际使用的输入方案 `*.custom.yaml` 中，把 `dual_17keys_algebra:/common/latin_26` 接入到 `patch/speller/algebra`。
 5. 重新部署 Rime。
 
