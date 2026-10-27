@@ -147,27 +147,27 @@ preset_keyboards:
     lock: true
     keys:
       # 上排 6 键
-      - { click: a, label: "hp", label_symbol: "a ia ua", width: 17, height: 55 }
-      - { click: b, label: "sh", label_symbol: "en in", width: 17, height: 55 }
-      - { click: c, label: "zh", label_symbol: "ang iao", width: 17, height: 55 }
-      - { click: d, label: "b", label_symbol: "ao iong", width: 16, height: 55 }
-      - { click: e, label: "x", label_symbol: "o v uai uan", width: 17, height: 55 }
-      - { click: f, label: "ms", label_symbol: "ie uo", width: 16, height: 55 }
+      - { click: h, label: "hp", label_symbol: "a ia ua", width: 17, height: 55 }
+      - { click: s, label: "sh", label_symbol: "en in", width: 17, height: 55 }
+      - { click: z, label: "zh", label_symbol: "ang iao", width: 17, height: 55 }
+      - { click: b, label: "b", label_symbol: "ao iong", width: 16, height: 55 }
+      - { click: x, label: "x", label_symbol: "o v uai uan", width: 17, height: 55 }
+      - { click: m, label: "ms", label_symbol: "ie uo", width: 16, height: 55 }
 
       # 中排 6 键
-      - { click: g, label: "l", label_symbol: "ai ue", width: 17, height: 55 }
-      - { click: h, label: "d", label_symbol: "u", width: 17, height: 55 }
-      - { click: i, label: "y", label_symbol: "eng ing", width: 17, height: 55 }
-      - { click: j, label: "wz", label_symbol: "e", width: 16, height: 55 }
-      - { click: k, label: "jk", label_symbol: "i", width: 17, height: 55 }
-      - { click: l, label: "nr", label_symbol: "an", width: 16, height: 55 }
+      - { click: l, label: "l", label_symbol: "ai ue", width: 17, height: 55 }
+      - { click: d, label: "d", label_symbol: "u", width: 17, height: 55 }
+      - { click: y, label: "y", label_symbol: "eng ing", width: 17, height: 55 }
+      - { click: w, label: "wz", label_symbol: "e", width: 16, height: 55 }
+      - { click: j, label: "jk", label_symbol: "i", width: 17, height: 55 }
+      - { click: n, label: "nr", label_symbol: "an", width: 16, height: 55 }
 
       # 下排 5 键 + 退格
-      - { click: m, label: "ch", label_symbol: "iang ui", width: 17, height: 55 }
-      - { click: n, label: "q~", label_symbol: "ian uang", width: 17, height: 55 }
-      - { click: o, label: "g", label_symbol: "ei un", width: 17, height: 55 }
-      - { click: p, label: "fc", label_symbol: "iu ou", width: 16, height: 55 }
-      - { click: q, label: "t", label_symbol: "er ong", width: 17, height: 55 }
+      - { click: c, label: "ch", label_symbol: "iang ui", width: 17, height: 55 }
+      - { click: q, label: "q~", label_symbol: "ian uang", width: 17, height: 55 }
+      - { click: g, label: "g", label_symbol: "ei un", width: 17, height: 55 }
+      - { click: f, label: "fc", label_symbol: "iu ou", width: 16, height: 55 }
+      - { click: t, label: "t", label_symbol: "er ong", width: 17, height: 55 }
       - {
           click: BackSpace,
           label: "⌫",
