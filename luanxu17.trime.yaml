@@ -1,0 +1,522 @@
+# yaml-language-server: $schema=./trime-schema.json
+# Trime 乱序17（17键双键布局）
+# encoding: utf-8
+# 基于 dual_17keys.trime.yaml 改造，声母/韵母分组严格按用户给定顺序
+
+config_version: "3.0"
+name: "乱序17"
+author: nextzhou + asogii
+
+style:
+  color_scheme: default
+  keyboard_height: 260
+  keyboard_height_land: 200
+  horizontal: true
+  keyboard_padding: 2
+  keyboard_padding_bottom: 5
+  keyboard_padding_land: 0
+  keyboard_padding_land_bottom: 0
+  reset_ascii_mode: false
+  auto_caps: false
+  latin_locale: en_US
+  locale: zh_CN
+  enter_label_mode: 3
+  enter_labels:
+    go: "前往"
+    done: "完成"
+    next: "下一个"
+    pre: "上一个"
+    search: "搜索"
+    send: "发送"
+    default: "⏎"
+  keyboards:
+    - default
+    - letter
+    - number_default
+    - number_letter
+    - symbols_default
+    - symbols_letter
+  candidate_use_cursor: true
+  candidate_view_height: 32
+  candidate_padding: 4
+  candidate_spacing: 4
+  candidate_text_size: 24
+  comment_on_top: false
+  comment_height: 16
+  comment_text_size: 14
+  horizontal_gap: 2
+  vertical_gap: 2
+  key_height: 55
+  key_width: 16
+  round_corner: 0
+  key_text_size: 18
+  key_long_text_size: 16
+  symbol_text_size: 12
+  key_hint_offset_x: 0
+  key_hint_offset_y: -0.5
+  preview_height: 48
+  preview_offset: -12
+  preview_text_size: 36
+
+preedit:
+  horizontal_padding: 8
+  top_end_radius: 4
+  foreground:
+    font_size: 16
+
+fallback_colors:
+  candidate_text_color: text_color
+  keyboard_background: keyboard_back_color
+  off_key_symbol_color: off_key_text_color
+  hilited_off_key_symbol_color: hilited_off_key_text_color
+  on_key_symbol_color: on_key_text_color
+  hilited_on_key_symbol_color: hilited_on_key_text_color
+  space_back_color: key_back_color
+  space_text_color: key_text_color
+  hilited_space_back_color: hilited_key_back_color
+  enter_back_color: off_key_back_color
+  enter_text_color: off_key_text_color
+  enter_symbol_color: enter_text_color
+  hilited_enter_back_color: hilited_off_key_back_color
+
+window:
+  insets:
+    vertical: 6
+    horizontal: 6
+  item_padding:
+    vertical: 4
+    horizontal: 8
+  min_width: 240
+  corner_radius: 12
+  alpha: 0.96
+  foreground:
+    label_font_size: 18
+    text_font_size: 22
+    comment_font_size: 16
+
+liquid_keyboard:
+  __include: trime:/liquid_keyboard
+
+tool_bar:
+  button_spacing: 8
+  back_style: "更多"
+  buttons:
+    - background: { normal: key_back_color, highlight: hilited_key_back_color, type: rectangle, corner_radius: 10, vertical_inset: 6, horizontal_inset: 2 }
+      foreground: { normal: key_text_color, highlight: hilited_key_text_color, font_size: 15, padding: 6 }
+      action: Hide
+    - background: { normal: key_back_color, highlight: hilited_key_back_color, type: rectangle, corner_radius: 10, vertical_inset: 6, horizontal_inset: 2 }
+      foreground: { normal: key_text_color, highlight: hilited_key_text_color, font_size: 15, padding: 6 }
+      action: Menu
+    - background: { normal: key_back_color, highlight: hilited_key_back_color, type: rectangle, corner_radius: 10, vertical_inset: 6, horizontal_inset: 2 }
+      foreground: { normal: key_text_color, highlight: hilited_key_text_color, font_size: 15, padding: 6 }
+      action: clipboard_window
+    - background: { normal: key_back_color, highlight: hilited_key_back_color, type: rectangle, corner_radius: 10, vertical_inset: 6, horizontal_inset: 2 }
+      foreground: { normal: key_text_color, highlight: hilited_key_text_color, font_size: 15, padding: 6 }
+      action: liquid_keyboard_emoji
+
+preset_keys:
+  __include: trime:/preset_keys
+  Hide: { label: 隐藏, send: BACK }
+  Menu: { label: 方案, send: Menu }
+  BackSpace: { label: 退格, repeatable: true, functional: true, send: BackSpace }
+  Return: { label: enter_labels, functional: true, send: Return }
+  Shift_L: { label: Caps, send: Shift_L, shift_lock: click }
+  Keyboard_default: { label: 中, functional: true, send: Eisu_toggle, select: default }
+  Keyboard_letter: { label: 英, functional: true, send: Eisu_toggle, select: letter }
+  Keyboard_number: { label: "123", functional: true, send: Eisu_toggle, select: number_default }
+  Keyboard_symbols: { label: 符号, functional: true, send: Eisu_toggle, select: symbols_default }
+  Keyboard_number_default: { label: "123", functional: true, send: Eisu_toggle, select: number_default }
+  Keyboard_number_letter: { label: "123", functional: true, send: Eisu_toggle, select: number_letter }
+  Keyboard_symbols_default: { label: 符号, functional: true, send: Eisu_toggle, select: symbols_default }
+  Keyboard_symbols_letter: { label: 符号, functional: true, send: Eisu_toggle, select: symbols_letter }
+  Keyboard_mini: { label: 更多, send: Menu, select: "" }
+  clipboard_window: { label: 剪贴, send: function, command: clipboard_window, option: "0" }
+  liquid_keyboard_emoji: { label: 表情, send: function, command: liquid_keyboard, option: "emoji" }
+
+preset_keyboards:
+  default:
+    name: 乱序17
+    author: asogii
+    ascii_mode: 0
+    reset_ascii_mode: true
+    ascii_keyboard: letter
+    horizontal_gap: 2
+    vertical_gap: 2
+    width: 16
+    height: 55
+    lock: true
+    keys:
+      # 上排 6 键
+      - { click: a, label: "hp", label_symbol: "a ia ua", width: 17, height: 55 }
+      - { click: b, label: "sh", label_symbol: "en in", width: 17, height: 55 }
+      - { click: c, label: "zh", label_symbol: "ang iao", width: 17, height: 55 }
+      - { click: d, label: "b", label_symbol: "ao iong", width: 16, height: 55 }
+      - { click: e, label: "x", label_symbol: "o v uai uan", width: 17, height: 55 }
+      - { click: f, label: "ms", label_symbol: "ie uo", width: 16, height: 55 }
+
+      # 中排 6 键
+      - { click: g, label: "l", label_symbol: "ai ue", width: 17, height: 55 }
+      - { click: h, label: "d", label_symbol: "u", width: 17, height: 55 }
+      - { click: i, label: "y", label_symbol: "eng ing", width: 17, height: 55 }
+      - { click: j, label: "wz", label_symbol: "e", width: 16, height: 55 }
+      - { click: k, label: "jk", label_symbol: "i", width: 17, height: 55 }
+      - { click: l, label: "nr", label_symbol: "an", width: 16, height: 55 }
+
+      # 下排 5 键 + 退格
+      - { click: m, label: "ch", label_symbol: "iang ui", width: 17, height: 55 }
+      - { click: n, label: "q~", label_symbol: "ian uang", width: 17, height: 55 }
+      - { click: o, label: "g", label_symbol: "ei un", width: 17, height: 55 }
+      - { click: p, label: "fc", label_symbol: "iu ou", width: 16, height: 55 }
+      - { click: q, label: "t", label_symbol: "er ong", width: 17, height: 55 }
+      - {
+          click: BackSpace,
+          label: "⌫",
+          width: 16,
+          height: 55,
+          key_back_color: off_key_back_color,
+          hilited_key_back_color: hilited_off_key_back_color,
+        }
+
+      # 底栏
+      - { click: Keyboard_number_default, width: 10, height: 50, key_text_size: 18 }
+      - { click: Keyboard_symbols_default, width: 10, height: 50, key_text_size: 18 }
+      - { click: comma, label: ",", label_symbol: ":", swipe_up: ":", width: 10, height: 50 }
+      - {
+          click: space,
+          swipe_up: Keyboard_letter,
+          width: 40,
+          height: 50,
+          key_back_color: space_back_color,
+          hilited_key_back_color: hilited_space_back_color,
+        }
+      - {
+          click: period,
+          label: "。",
+          long_click: "?",
+          label_symbol: "?",
+          swipe_up: "?",
+          hint: "…",
+          swipe_down: "…",
+          width: 10,
+          height: 50,
+        }
+      - {
+          click: Return,
+          width: 20,
+          height: 50,
+          key_text_size: 17,
+          key_back_color: enter_back_color,
+          hilited_key_back_color: hilited_enter_back_color,
+          key_text_color: enter_text_color,
+          hilited_key_text_color: enter_text_color,
+        }
+
+  # 下面 letter / number / symbols 页保持原 dual_17keys 结构，几乎没动
+  letter:
+    name: 英文26键
+    author: nextzhou
+    ascii_mode: 1
+    reset_ascii_mode: true
+    horizontal_gap: 2
+    vertical_gap: 2
+    width: 10
+    lock: false
+    keys:
+      - { click: "1", long_click: "!", label_symbol: "!", swipe_up: "!", width: 10, height: 30, key_text_size: 15, symbol_text_size: 9, key_text_offset_y: 4 }
+      - { click: "2", long_click: "@", label_symbol: "@", swipe_up: "@", width: 10, height: 30, key_text_size: 15, symbol_text_size: 9, key_text_offset_y: 4 }
+      - { click: "3", long_click: "#", label_symbol: "#", swipe_up: "#", width: 10, height: 30, key_text_size: 15, symbol_text_size: 9, key_text_offset_y: 4 }
+      - { click: "4", long_click: "$", label_symbol: "$", swipe_up: "$", width: 10, height: 30, key_text_size: 15, symbol_text_size: 9, key_text_offset_y: 4 }
+      - { click: "5", long_click: "%", label_symbol: "%", swipe_up: "%", width: 10, height: 30, key_text_size: 15, symbol_text_size: 9, key_text_offset_y: 4 }
+      - { click: "6", long_click: "^", label_symbol: "^", swipe_up: "^", width: 10, height: 30, key_text_size: 15, symbol_text_size: 9, key_text_offset_y: 4 }
+      - { click: "7", long_click: "&", label_symbol: "&", swipe_up: "&", width: 10, height: 30, key_text_size: 15, symbol_text_size: 9, key_text_offset_y: 4 }
+      - { click: "8", long_click: "*", label_symbol: "*", swipe_up: "*", width: 10, height: 30, key_text_size: 15, symbol_text_size: 9, key_text_offset_y: 4 }
+      - { click: "9", long_click: "(", label_symbol: "(", swipe_up: "(", width: 10, height: 30, key_text_size: 15, symbol_text_size: 9, key_text_offset_y: 4 }
+      - { click: "0", long_click: ")", label_symbol: ")", swipe_up: ")", width: 10, height: 30, key_text_size: 15, symbol_text_size: 9, key_text_offset_y: 4 }
+      - { click: "q", swipe_up: "Q", width: 10, height: 45 }
+      - { click: "w", swipe_up: "W", width: 10, height: 45 }
+      - { click: "e", swipe_up: "E", width: 10, height: 45 }
+      - { click: "r", swipe_up: "R", width: 10, height: 45 }
+      - { click: "t", swipe_up: "T", width: 10, height: 45 }
+      - { click: "y", swipe_up: "Y", width: 10, height: 45 }
+      - { click: "u", swipe_up: "U", width: 10, height: 45 }
+      - { click: "i", swipe_up: "I", width: 10, height: 45 }
+      - { click: "o", swipe_up: "O", width: 10, height: 45 }
+      - { click: "p", swipe_up: "P", width: 10, height: 45 }
+      - { width: 5, height: 45 }
+      - { click: "a", swipe_up: "A", width: 10, height: 45 }
+      - { click: "s", swipe_up: "S", width: 10, height: 45 }
+      - { click: "d", swipe_up: "D", width: 10, height: 45 }
+      - { click: "f", swipe_up: "F", width: 10, height: 45 }
+      - { click: "g", swipe_up: "G", width: 10, height: 45 }
+      - { click: "h", swipe_up: "H", width: 10, height: 45 }
+      - { click: "j", swipe_up: "J", width: 10, height: 45 }
+      - { click: "k", swipe_up: "K", width: 10, height: 45 }
+      - { click: "l", swipe_up: "L", width: 10, height: 45 }
+      - { width: 5, height: 45 }
+      - { click: Shift_L, send_bindings: false, width: 15, height: 45 }
+      - { click: "z", swipe_up: "Z", width: 10, height: 45 }
+      - { click: "x", swipe_up: "X", width: 10, height: 45 }
+      - { click: "c", swipe_up: "C", width: 10, height: 45 }
+      - { click: "v", swipe_up: "V", width: 10, height: 45 }
+      - { click: "b", swipe_up: "B", width: 10, height: 45 }
+      - { click: "n", swipe_up: "N", width: 10, height: 45 }
+      - { click: "m", swipe_up: "M", width: 10, height: 45 }
+      - {
+          click: BackSpace,
+          swipe_left: Escape,
+          width: 15,
+          height: 45,
+          key_back_color: off_key_back_color,
+          hilited_key_back_color: hilited_off_key_back_color,
+        }
+      - { click: Keyboard_number_letter, width: 10, height: 50, key_text_size: 18 }
+      - { click: Keyboard_symbols_letter, width: 10, height: 50, key_text_size: 18 }
+      - { click: comma, label: ",", width: 10, height: 50 }
+      - {
+          click: space,
+          swipe_up: Keyboard_default,
+          width: 40,
+          height: 50,
+          key_back_color: space_back_color,
+          hilited_key_back_color: hilited_space_back_color,
+        }
+      - {
+          click: period,
+          label: ".",
+          long_click: "?",
+          label_symbol: "?",
+          swipe_up: "?",
+          width: 10,
+          height: 50,
+        }
+      - {
+          click: Return,
+          composing: Return1,
+          long_click: CommitComment,
+          width: 20,
+          height: 50,
+          key_text_size: 17,
+          key_back_color: enter_back_color,
+          hilited_key_back_color: hilited_enter_back_color,
+          key_text_color: enter_text_color,
+          hilited_key_text_color: enter_text_color,
+        }
+
+  number_default:
+    __include: trime:/preset_keyboards/number
+    name: 数字
+    author: nextzhou
+    ascii_mode: 1
+    reset_ascii_mode: true
+    horizontal_gap: 2
+    vertical_gap: 2
+    lock: false
+    __patch:
+      - "keys/@1/click": "1"
+      - "keys/@2/click": "2"
+      - "keys/@3/click": "3"
+      - "keys/@6/click": "4"
+      - "keys/@7/click": "5"
+      - "keys/@8/click": "6"
+      - "keys/@11/click": "7"
+      - "keys/@12/click": "8"
+      - "keys/@13/click": "9"
+      - "keys/@17/click": "0"
+      - "keys/@20/click": Keyboard_default
+      - "keys/@20/width": 10
+      - "keys/@20/key_text_size": 18
+      - "keys/@21/click": "="
+      - "keys/@21/label": "="
+      - "keys/@21/width": 10
+      - "keys/@21/long_click": ""
+      - "keys/@22/click": "."
+      - "keys/@22/label": "."
+      - "keys/@22/width": 10
+      - "keys/@22/long_click": ""
+      - "keys/@23/width": 30
+      - "keys/@23/key_back_color": off_key_back_color
+      - "keys/@23/hilited_key_back_color": hilited_off_key_back_color
+      - "keys/@24/width": 40
+      - "keys/@24/key_back_color": enter_back_color
+      - "keys/@24/hilited_key_back_color": hilited_enter_back_color
+      - "keys/@24/key_text_color": enter_text_color
+      - "keys/@24/hilited_key_text_color": enter_text_color
+
+  number_letter:
+    __include: trime:/preset_keyboards/number
+    name: 英文数字
+    author: nextzhou
+    ascii_mode: 1
+    reset_ascii_mode: true
+    horizontal_gap: 2
+    vertical_gap: 2
+    lock: false
+    __patch:
+      - "keys/@1/click": "1"
+      - "keys/@2/click": "2"
+      - "keys/@3/click": "3"
+      - "keys/@6/click": "4"
+      - "keys/@7/click": "5"
+      - "keys/@8/click": "6"
+      - "keys/@11/click": "7"
+      - "keys/@12/click": "8"
+      - "keys/@13/click": "9"
+      - "keys/@17/click": "0"
+      - "keys/@20/click": Keyboard_letter
+      - "keys/@20/width": 10
+      - "keys/@20/key_text_size": 18
+      - "keys/@21/click": "="
+      - "keys/@21/label": "="
+      - "keys/@21/width": 10
+      - "keys/@21/long_click": ""
+      - "keys/@22/click": "."
+      - "keys/@22/label": "."
+      - "keys/@22/width": 10
+      - "keys/@22/long_click": ""
+      - "keys/@23/width": 30
+      - "keys/@23/key_back_color": off_key_back_color
+      - "keys/@23/hilited_key_back_color": hilited_off_key_back_color
+      - "keys/@24/width": 40
+      - "keys/@24/key_back_color": enter_back_color
+      - "keys/@24/hilited_key_back_color": hilited_enter_back_color
+      - "keys/@24/key_text_color": enter_text_color
+      - "keys/@24/hilited_key_text_color": enter_text_color
+
+  symbols_default:
+    name: 符号
+    author: nextzhou
+    ascii_mode: 0
+    width: 10
+    height: 44
+    horizontal_gap: 2
+    vertical_gap: 2
+    lock: false
+    keys:
+      - { click: '1' }
+      - { click: '2' }
+      - { click: '3' }
+      - { click: '4' }
+      - { click: '5' }
+      - { click: '6' }
+      - { click: '7' }
+      - { click: '8' }
+      - { click: '9' }
+      - { click: '0' }
+      - { click: '～', long_click: '`' }
+      - { click: '！' }
+      - { click: '＠' }
+      - { click: '＃' }
+      - { click: '＄' }
+      - { click: '￥' }
+      - { click: '％' }
+      - { click: '＾' }
+      - { click: '＆' }
+      - { click: '＊' }
+      - { click: '（', long_click: '{' }
+      - { click: '）', long_click: '}' }
+      - { click: '【', long_click: '[' }
+      - { click: '】', long_click: ']' }
+      - { click: '「', long_click: '『' }
+      - { click: '」', long_click: '』' }
+      - { click: '、', long_click: '|' }
+      - { click: '／', long_click: '√' }
+      - { click: '：' }
+      - { click: '；' }
+      - { click: '＋' }
+      - { click: '－', long_click: '_' }
+      - { click: '＝' }
+      - { click: '〈', long_click: '《' }
+      - { click: '〉', long_click: '》' }
+      - { click: '“', long_click: '‘' }
+      - { click: '”', long_click: '’' }
+      - { click: '，' }
+      - { click: '？' }
+      - { click: BackSpace, long_click: Escape, key_back_color: off_key_back_color, hilited_key_back_color: hilited_off_key_back_color }
+      - { click: '，', width: 10, long_click: '' }
+      - { click: Keyboard_default, width: 10, key_text_size: 18, long_click: '' }
+      - { click: '。', width: 10, long_click: '' }
+      - { click: BackSpace, width: 30, long_click: '', key_back_color: off_key_back_color, hilited_key_back_color: hilited_off_key_back_color }
+      - { click: Return, width: 40, long_click: select_all, key_back_color: enter_back_color, hilited_key_back_color: hilited_enter_back_color, key_text_color: enter_text_color, hilited_key_text_color: enter_text_color }
+
+  symbols_letter:
+    __include: trime:/preset_keyboards/symbols
+    name: 英文符号
+    author: nextzhou
+    ascii_mode: 1
+    reset_ascii_mode: true
+    horizontal_gap: 2
+    vertical_gap: 2
+    lock: false
+    __patch:
+      - "keys/@40/click": "，"
+      - "keys/@40/label": "，"
+      - "keys/@40/width": 10
+      - "keys/@40/long_click": ""
+      - "keys/@41/click": Keyboard_letter
+      - "keys/@41/width": 10
+      - "keys/@41/long_click": ""
+      - "keys/@42/click": "。"
+      - "keys/@42/label": "。"
+      - "keys/@42/width": 10
+      - "keys/@42/long_click": ""
+      - "keys/@43/click": BackSpace
+      - "keys/@43/width": 30
+      - "keys/@43/long_click": ""
+      - "keys/@43/key_back_color": off_key_back_color
+      - "keys/@43/hilited_key_back_color": hilited_off_key_back_color
+      - "keys/@44/click": Return
+      - "keys/@44/width": 40
+      - "keys/@44/long_click": select_all
+      - "keys/@44/key_back_color": enter_back_color
+      - "keys/@44/hilited_key_back_color": hilited_enter_back_color
+      - "keys/@44/key_text_color": enter_text_color
+      - "keys/@44/hilited_key_text_color": enter_text_color
+      - "keys/@45/click": ""
+      - "keys/@45/width": 0
+      - "keys/@45/label": ""
+      - "keys/@45/long_click": ""
+      - "keys/@46/click": ""
+      - "keys/@46/width": 0
+      - "keys/@46/label": ""
+      - "keys/@46/long_click": ""
+      - "keys/@47/click": ""
+      - "keys/@47/width": 0
+      - "keys/@47/label": ""
+      - "keys/@47/long_click": ""
+
+android_keys:
+  __include: trime:/android_keys
+
+preset_color_schemes:
+  default:
+    name: 默认
+    author: nextzhou
+    back_color: 0xFFFFFF
+    text_color: 0x111111
+    border_color: 0xD8DDE3
+    candidate_separator_color: 0xE4E7EB
+    candidate_text_color: 0x1F2328
+    comment_text_color: 0x7A7F87
+    hilited_back_color: 0xEEF3F8
+    hilited_text_color: 0x111111
+    hilited_candidate_back_color: 0xDCE5EF
+    hilited_candidate_text_color: 0x111111
+    hilited_comment_text_color: 0x5F6670
+    keyboard_back_color: 0xEEF1F4
+    key_back_color: 0xFFFFFF
+    key_border_color: 0xD8DDE3
+    key_text_color: 0x111111
+    key_symbol_color: 0x8A9199
+    hilited_key_back_color: 0xDCE5EF
+    hilited_key_text_color: 0x111111
+    off_key_back_color: 0xE8ECF0
+    off_key_text_color: 0x4E5968
+    on_key_back_color: 0xCDD8E4
+    on_key_text_color: 0x1F2937
+    preview_back_color: 0xFFFFFF
+    preview_text_color: 0x111111
+    space_back_color: 0xF7F9FC
+    hilited_space_back_color: 0xE3EAF3
+    enter_back_color: 0xE0E7F0
+    enter_text_color: 0x1C2A3A
+    hilited_enter_back_color: 0xCAD6E4
