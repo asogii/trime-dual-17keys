@@ -100,7 +100,7 @@ liquid_keyboard:
 
 tool_bar:
   button_spacing: 8
-  back_style: "更多"
+  back_style: "返回"
   buttons:
     - background: { normal: key_back_color, highlight: hilited_key_back_color, type: rectangle, corner_radius: 10, vertical_inset: 6, horizontal_inset: 2 }
       foreground: { normal: key_text_color, highlight: hilited_key_text_color, font_size: 15, padding: 6 }
@@ -117,7 +117,7 @@ tool_bar:
 
 preset_keys:
   __include: trime:/preset_keys
-  Hide: { label: 隐藏, send: BACK }
+  Hide: { label: "⏷", send: BACK }
   Menu: { label: 方案, send: Menu }
   BackSpace: { label: 退格, repeatable: true, functional: true, send: BackSpace }
   Return: { label: enter_labels, functional: true, send: Return }
@@ -131,7 +131,7 @@ preset_keys:
   Keyboard_symbols_default: { label: 符号, functional: true, send: Eisu_toggle, select: symbols_default }
   Keyboard_symbols_letter: { label: 符号, functional: true, send: Eisu_toggle, select: symbols_letter }
   Keyboard_mini: { label: 更多, send: Menu, select: "" }
-  clipboard_window: { label: 剪贴, send: function, command: clipboard_window, option: "0" }
+  clipboard_window: { label: 剪贴板, send: function, command: clipboard_window, option: "0" }
   liquid_keyboard_emoji: { label: 表情, send: function, command: liquid_keyboard, option: "emoji" }
 
 preset_keyboards:
@@ -149,43 +149,43 @@ preset_keyboards:
     keys:
       # 上排 6 键 —— 对应万象乱序17字母
       # h = HP / a ia ua
-      - { click: h, label: "HP", hint: "a ia ua", label_symbol: "1", long_click: "1", swipe_up: "1", width: 17, height: 55 }
+      - { click: h, label: "HP", hint: "a ia ua", label_symbol: "1", swipe_up: "1", width: 17, height: 55 }
       # s = SH / en in
-      - { click: s, label: "SH", hint: "en in", label_symbol: "2", long_click: "2", swipe_up: "2", width: 17, height: 55 }
+      - { click: s, label: "Sh", hint: "en in", label_symbol: "2", swipe_up: "2", width: 17, height: 55 }
       # z = ZH / ang iao
-      - { click: z, label: "ZH", hint: "ang iao", label_symbol: "3", long_click: "3", swipe_up: "3", width: 17, height: 55 }
+      - { click: z, label: "Zh", hint: "ang iao", label_symbol: "3", swipe_up: "3", width: 17, height: 55 }
       # b = B / ao iong
-      - { click: b, label: "B", hint: "ao iong", label_symbol: "4", long_click: "4", swipe_up: "4", width: 16, height: 55 }
+      - { click: b, label: "B", hint: "ao iong", label_symbol: "4", swipe_up: "4", width: 16, height: 55 }
       # x = oXv / uai uan
-      - { click: x, label: "oXv", hint: "uai uan", label_symbol: "5", long_click: "5", swipe_up: "5", width: 17, height: 55 }
+      - { click: x, label: "oXv", hint: "uai uan", label_symbol: "5", swipe_up: "5", width: 17, height: 55 }
       # m = MS / ie uo
-      - { click: m, label: "MS", hint: "ie uo", label_symbol: "6", long_click: "6", swipe_up: "6", width: 16, height: 55 }
+      - { click: m, label: "MS", hint: "ie uo", label_symbol: "6", swipe_up: "6", width: 16, height: 55 }
 
       # 中排 6 键
       # l = L / ai ue
-      - { click: l, label: "L", hint: "ai ue", label_symbol: "7", long_click: "7", swipe_up: "7", width: 17, height: 55 }
+      - { click: l, label: "L", hint: "ai ue", label_symbol: "7", swipe_up: "7", width: 17, height: 55 }
       # d = D / u
-      - { click: d, label: "D", hint: "u", label_symbol: "8", long_click: "8", swipe_up: "8", width: 17, height: 55 }
+      - { click: d, label: "D", hint: "u", label_symbol: "8", swipe_up: "8", width: 17, height: 55 }
       # y = Y / eng ing
-      - { click: y, label: "Y", hint: "eng ing", label_symbol: "9", long_click: "9", swipe_up: "9", width: 17, height: 55 }
+      - { click: y, label: "Y", hint: "eng ing", label_symbol: "9", swipe_up: "9", width: 17, height: 55 }
       # w = WZ / e
-      - { click: w, label: "WZ", hint: "e", label_symbol: "0", long_click: "0", swipe_up: "0", width: 16, height: 55 }
+      - { click: w, label: "WZ", hint: "e", label_symbol: "0", swipe_up: "0", width: 16, height: 55 }
       # j = JK / i
-      - { click: j, label: "JK", hint: "i", label_symbol: "，", long_click: "，", swipe_up: "，", width: 17, height: 55 }
+      - { click: j, label: "JK", hint: "i", label_symbol: "，", swipe_up: "，", width: 17, height: 55 }
       # n = NR / an
-      - { click: n, label: "NR", hint: "an", label_symbol: "。", long_click: "。", swipe_up: "。", width: 16, height: 55 }
+      - { click: n, label: "NR", hint: "an", label_symbol: "。", swipe_up: "。", width: 16, height: 55 }
 
       # 下排 5 键 + 退格
       # c = CH / iang ui
-      - { click: c, label: "CH", hint: "iang ui", label_symbol: "？", long_click: "？", swipe_up: "？", width: 17, height: 55 }
+      - { click: c, label: "Ch", hint: "iang ui", label_symbol: "？", swipe_up: "？", width: 17, height: 55 }
       # q = Q~ / ian uang
-      - { click: q, label: "Q~", hint: "ian uang", label_symbol: "！", long_click: "！", swipe_up: "！", width: 17, height: 55 }
+      - { click: q, label: "Q~", hint: "ian uang", label_symbol: "！", swipe_up: "！", width: 17, height: 55 }
       # g = G / ei un
-      - { click: g, label: "G", hint: "ei un", label_symbol: "、", long_click: "、", swipe_up: "、", width: 17, height: 55 }
+      - { click: g, label: "G", hint: "ei un", label_symbol: "、", swipe_up: "、", width: 17, height: 55 }
       # f = FC / iu ou
-      - { click: f, label: "FC", hint: "iu ou", label_symbol: "；", long_click: "；", swipe_up: "；", width: 16, height: 55 }
+      - { click: f, label: "FC", hint: "iu ou", label_symbol: "；", swipe_up: "；", width: 16, height: 55 }
       # t = T / er ong
-      - { click: t, label: "T", hint: "er ong", label_symbol: "：", long_click: "：", swipe_up: "：", width: 17, height: 55 }
+      - { click: t, label: "T", hint: "er ong", label_symbol: "：", swipe_up: "：", width: 17, height: 55 }
       - {
           click: BackSpace,
           label: "⌫",
@@ -250,46 +250,46 @@ preset_keyboards:
     lock: false
     keys:
       # 数字行
-      - { click: "1", long_click: "!", label_symbol: "!", swipe_up: "!", width: 10, height: 30, key_text_size: 15, symbol_text_size: 9, key_text_offset_y: 4 }
-      - { click: "2", long_click: "@", label_symbol: "@", swipe_up: "@", width: 10, height: 30, key_text_size: 15, symbol_text_size: 9, key_text_offset_y: 4 }
-      - { click: "3", long_click: "#", label_symbol: "#", swipe_up: "#", width: 10, height: 30, key_text_size: 15, symbol_text_size: 9, key_text_offset_y: 4 }
-      - { click: "4", long_click: "$", label_symbol: "$", swipe_up: "$", width: 10, height: 30, key_text_size: 15, symbol_text_size: 9, key_text_offset_y: 4 }
-      - { click: "5", long_click: "%", label_symbol: "%", swipe_up: "%", width: 10, height: 30, key_text_size: 15, symbol_text_size: 9, key_text_offset_y: 4 }
-      - { click: "6", long_click: "^", label_symbol: "^", swipe_up: "^", width: 10, height: 30, key_text_size: 15, symbol_text_size: 9, key_text_offset_y: 4 }
-      - { click: "7", long_click: "&", label_symbol: "&", swipe_up: "&", width: 10, height: 30, key_text_size: 15, symbol_text_size: 9, key_text_offset_y: 4 }
-      - { click: "8", long_click: "*", label_symbol: "*", swipe_up: "*", width: 10, height: 30, key_text_size: 15, symbol_text_size: 9, key_text_offset_y: 4 }
-      - { click: "9", long_click: "(", label_symbol: "(", swipe_up: "(", width: 10, height: 30, key_text_size: 15, symbol_text_size: 9, key_text_offset_y: 4 }
-      - { click: "0", long_click: ")", label_symbol: ")", swipe_up: ")", width: 10, height: 30, key_text_size: 15, symbol_text_size: 9, key_text_offset_y: 4 }
+      - { click: "1", label_symbol: "°", swipe_up: "°", width: 10, height: 30, key_text_size: 15, symbol_text_size: 9, key_text_offset_y: 4 }
+      - { click: "2", label_symbol: "¥", swipe_up: "¥", width: 10, height: 30, key_text_size: 15, symbol_text_size: 9, key_text_offset_y: 4 }
+      - { click: "3", label_symbol: "≠", swipe_up: "≠", width: 10, height: 30, key_text_size: 15, symbol_text_size: 9, key_text_offset_y: 4 }
+      - { click: "4", label_symbol: "≈", swipe_up: "≈", width: 10, height: 30, key_text_size: 15, symbol_text_size: 9, key_text_offset_y: 4 }
+      - { click: "5", label_symbol: "↑", swipe_up: "↑", width: 10, height: 30, key_text_size: 15, symbol_text_size: 9, key_text_offset_y: 4 }
+      - { click: "6", label_symbol: "↓", swipe_up: "↓", width: 10, height: 30, key_text_size: 15, symbol_text_size: 9, key_text_offset_y: 4 }
+      - { click: "7", label_symbol: "[", swipe_up: "[", width: 10, height: 30, key_text_size: 15, symbol_text_size: 9, key_text_offset_y: 4 }
+      - { click: "8", label_symbol: "]", swipe_up: "]", width: 10, height: 30, key_text_size: 15, symbol_text_size: 9, key_text_offset_y: 4 }
+      - { click: "9", label_symbol: "{", swipe_up: "{", width: 10, height: 30, key_text_size: 15, symbol_text_size: 9, key_text_offset_y: 4 }
+      - { click: "0", label_symbol: "}", swipe_up: "}", width: 10, height: 30, key_text_size: 15, symbol_text_size: 9, key_text_offset_y: 4 }
       # 字母行上标（常用符号，含 | ，参考百度风格）
-      - { click: "q", label_symbol: "~", long_click: "~", swipe_up: "Q", width: 10, height: 45 }
-      - { click: "w", label_symbol: "`", long_click: "`", swipe_up: "W", width: 10, height: 45 }
-      - { click: "e", label_symbol: "!", long_click: "!", swipe_up: "E", width: 10, height: 45 }
-      - { click: "r", label_symbol: "@", long_click: "@", swipe_up: "R", width: 10, height: 45 }
-      - { click: "t", label_symbol: "#", long_click: "#", swipe_up: "T", width: 10, height: 45 }
-      - { click: "y", label_symbol: "$", long_click: "$", swipe_up: "Y", width: 10, height: 45 }
-      - { click: "u", label_symbol: "%", long_click: "%", swipe_up: "U", width: 10, height: 45 }
-      - { click: "i", label_symbol: "^", long_click: "^", swipe_up: "I", width: 10, height: 45 }
-      - { click: "o", label_symbol: "&", long_click: "&", swipe_up: "O", width: 10, height: 45 }
-      - { click: "p", label_symbol: "*", long_click: "*", swipe_up: "P", width: 10, height: 45 }
+      - { click: "q", label_symbol: "`", swipe_up: "`", width: 10, height: 45 }
+      - { click: "w", label_symbol: "^", swipe_up: "^", width: 10, height: 45 }
+      - { click: "e", label_symbol: "+", swipe_up: "+", width: 10, height: 45 }
+      - { click: "r", label_symbol: "$", swipe_up: "$", width: 10, height: 45 }
+      - { click: "t", label_symbol: "<", swipe_up: "<", width: 10, height: 45 }
+      - { click: "y", label_symbol: ">", swipe_up: ">", width: 10, height: 45 }
+      - { click: "u", label_symbol: "&", swipe_up: "&", width: 10, height: 45 }
+      - { click: "i", label_symbol: "|", swipe_up: "|", width: 10, height: 45 }
+      - { click: "o", label_symbol: "=", swipe_up: "=", width: 10, height: 45 }
+      - { click: "p", label_symbol: "\\", swipe_up: "\\", width: 10, height: 45 }
       - { width: 5, height: 45 }
-      - { click: "a", label_symbol: "(", long_click: "(", swipe_up: "A", width: 10, height: 45 }
-      - { click: "s", label_symbol: ")", long_click: ")", swipe_up: "S", width: 10, height: 45 }
-      - { click: "d", label_symbol: "-", long_click: "-", swipe_up: "D", width: 10, height: 45 }
-      - { click: "f", label_symbol: "_", long_click: "_", swipe_up: "F", width: 10, height: 45 }
-      - { click: "g", label_symbol: "=", long_click: "=", swipe_up: "G", width: 10, height: 45 }
-      - { click: "h", label_symbol: "+", long_click: "+", swipe_up: "H", width: 10, height: 45 }
-      - { click: "j", label_symbol: "[", long_click: "[", swipe_up: "J", width: 10, height: 45 }
-      - { click: "k", label_symbol: "]", long_click: "]", swipe_up: "K", width: 10, height: 45 }
-      - { click: "l", label_symbol: "|", long_click: "|", swipe_up: "L", width: 10, height: 45 }
+      - { click: "a", label_symbol: "~", swipe_up: "~", width: 10, height: 45 }
+      - { click: "s", label_symbol: "!", swipe_up: "!", width: 10, height: 45 }
+      - { click: "d", label_symbol: "@", swipe_up: "@", width: 10, height: 45 }
+      - { click: "f", label_symbol: "#", swipe_up: "#", width: 10, height: 45 }
+      - { click: "g", label_symbol: "%", swipe_up: "%", width: 10, height: 45 }
+      - { click: "h", label_symbol: "'", swipe_up: "'", width: 10, height: 45 }
+      - { click: "j", label_symbol: "\"", swipe_up: "\"", width: 10, height: 45 }
+      - { click: "k", label_symbol: "*", swipe_up: "*", width: 10, height: 45 }
+      - { click: "l", label_symbol: "?", swipe_up: "?", width: 10, height: 45 }
       - { width: 5, height: 45 }
       - { click: Shift_L, send_bindings: false, width: 15, height: 45 }
-      - { click: "z", label_symbol: "\\", long_click: "\\", swipe_up: "Z", width: 10, height: 45 }
-      - { click: "x", label_symbol: "/", long_click: "/", swipe_up: "X", width: 10, height: 45 }
-      - { click: "c", label_symbol: ":", long_click: ":", swipe_up: "C", width: 10, height: 45 }
-      - { click: "v", label_symbol: ";", long_click: ";", swipe_up: "V", width: 10, height: 45 }
-      - { click: "b", label_symbol: "\"", long_click: "\"", swipe_up: "B", width: 10, height: 45 }
-      - { click: "n", label_symbol: "'", long_click: "'", swipe_up: "N", width: 10, height: 45 }
-      - { click: "m", label_symbol: "?", long_click: "?", swipe_up: "M", width: 10, height: 45 }
+      - { click: "z", label_symbol: "(", long_click: "(", swipe_up: "Z", width: 10, height: 45 }
+      - { click: "x", label_symbol: ")", swipe_up: ")", width: 10, height: 45 }
+      - { click: "c", label_symbol: "-", swipe_up: "-", width: 10, height: 45 }
+      - { click: "v", label_symbol: "_", swipe_up: "_", width: 10, height: 45 }
+      - { click: "b", label_symbol: ":", long_click: ":", swipe_up: "B", width: 10, height: 45 }
+      - { click: "n", label_symbol: ";", swipe_up: ";", width: 10, height: 45 }
+      - { click: "m", label_symbol: "/", swipe_up: "/", width: 10, height: 45 }
       - {
           click: BackSpace,
           swipe_left: Escape,
