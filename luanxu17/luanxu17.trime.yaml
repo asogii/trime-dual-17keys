@@ -283,11 +283,11 @@ preset_keyboards:
       - { click: "l", label_symbol: "?", swipe_up: "?", width: 10, height: 45 }
       - { width: 5, height: 45 }
       - { click: Shift_L, send_bindings: false, width: 15, height: 45 }
-      - { click: "z", label_symbol: "(", long_click: "(", swipe_up: "Z", width: 10, height: 45 }
+      - { click: "z", label_symbol: "(", swipe_up: "(", width: 10, height: 45 }
       - { click: "x", label_symbol: ")", swipe_up: ")", width: 10, height: 45 }
       - { click: "c", label_symbol: "-", swipe_up: "-", width: 10, height: 45 }
       - { click: "v", label_symbol: "_", swipe_up: "_", width: 10, height: 45 }
-      - { click: "b", label_symbol: ":", long_click: ":", swipe_up: "B", width: 10, height: 45 }
+      - { click: "b", label_symbol: ":", swipe_up: ":", width: 10, height: 45 }
       - { click: "n", label_symbol: ";", swipe_up: ";", width: 10, height: 45 }
       - { click: "m", label_symbol: "/", swipe_up: "/", width: 10, height: 45 }
       - {
