@@ -117,11 +117,12 @@ tool_bar:
 
 preset_keys:
   __include: trime:/preset_keys
-  Hide: { label: "⏷", send: BACK }
+  Hide: { label: "▼", send: BACK }
   Menu: { label: 方案, send: Menu }
-  BackSpace: { label: 退格, repeatable: true, functional: true, send: BackSpace }
+  BackSpace: { label: "⌫", repeatable: true, functional: true, send: BackSpace }
   Return: { label: enter_labels, functional: true, send: Return }
-  Shift_L: { label: Caps, send: Shift_L, shift_lock: click }
+  Shift_L: { label: "⇧", send: Shift_L }
+  Shift_L_lock: { label: "⇪", send: Shift_L, shift_lock: click }
   Keyboard_default: { label: 中, functional: true, send: Eisu_toggle, select: default }
   Keyboard_letter: { label: 英, functional: true, send: Eisu_toggle, select: letter }
   Keyboard_number: { label: "123", functional: true, send: Eisu_toggle, select: number_default }
@@ -131,7 +132,7 @@ preset_keys:
   Keyboard_symbols_default: { label: 符号, functional: true, send: Eisu_toggle, select: symbols_default }
   Keyboard_symbols_letter: { label: 符号, functional: true, send: Eisu_toggle, select: symbols_letter }
   Keyboard_mini: { label: 更多, send: Menu, select: "" }
-  clipboard_window: { label: 剪贴板, send: function, command: clipboard_window, option: "0" }
+  clipboard_window: { label: 剪贴, send: function, command: clipboard_window, option: "0" }
   liquid_keyboard_emoji: { label: 表情, send: function, command: liquid_keyboard, option: "emoji" }
 
 preset_keyboards:
@@ -171,21 +172,21 @@ preset_keyboards:
       # w = WZ / e
       - { click: w, label: "WZ", hint: "e", label_symbol: "0", swipe_up: "0", width: 16, height: 55 }
       # j = JK / i
-      - { click: j, label: "JK", hint: "i", label_symbol: "，", swipe_up: "，", width: 17, height: 55 }
+      - { click: j, label: "JK", hint: "i", label_symbol: "！", swipe_up: "！", width: 17, height: 55 }
       # n = NR / an
-      - { click: n, label: "NR", hint: "an", label_symbol: "。", swipe_up: "。", width: 16, height: 55 }
+      - { click: n, label: "NR", hint: "an", label_symbol: "—", swipe_up: "—", width: 16, height: 55 }
 
       # 下排 5 键 + 退格
       # c = CH / iang ui
-      - { click: c, label: "Ch", hint: "iang ui", label_symbol: "？", swipe_up: "？", width: 17, height: 55 }
+      - { click: c, label: "Ch", hint: "iang ui", label_symbol: "（", swipe_up: "（", width: 17, height: 55 }
       # q = Q~ / ian uang
-      - { click: q, label: "Q~", hint: "ian uang", label_symbol: "！", swipe_up: "！", width: 17, height: 55 }
+      - { click: q, label: "Q~", hint: "ian uang", label_symbol: "）", swipe_up: "）", width: 17, height: 55 }
       # g = G / ei un
-      - { click: g, label: "G", hint: "ei un", label_symbol: "、", swipe_up: "、", width: 17, height: 55 }
+      - { click: g, label: "G", hint: "ei un", label_symbol: "·", swipe_up: "·", width: 17, height: 55 }
       # f = FC / iu ou
-      - { click: f, label: "FC", hint: "iu ou", label_symbol: "；", swipe_up: "；", width: 16, height: 55 }
+      - { click: f, label: "FC", hint: "iu ou", label_symbol: "：", swipe_up: "：", width: 16, height: 55 }
       # t = T / er ong
-      - { click: t, label: "T", hint: "er ong", label_symbol: "：", swipe_up: "：", width: 17, height: 55 }
+      - { click: t, label: "T", hint: "er ong", label_symbol: "；", swipe_up: "；", width: 17, height: 55 }
       - {
           click: BackSpace,
           label: "⌫",
@@ -198,20 +199,11 @@ preset_keyboards:
       # 底栏（加回逗号，空格缩短）
       - { click: Keyboard_number_default, width: 11, height: 50, key_text_size: 16 }
       - { click: Keyboard_symbols_default, width: 11, height: 50, key_text_size: 16 }
-      - {
-          click: Keyboard_letter,
-          label: "英",
-          width: 12,
-          height: 50,
-          key_text_size: 16,
-          key_back_color: off_key_back_color,
-          hilited_key_back_color: hilited_off_key_back_color,
-        }
       - { click: comma, label: "，", label_symbol: "、", swipe_up: "、", width: 10, height: 50 }
       - {
           click: space,
           swipe_up: Keyboard_letter,
-          width: 30,
+          width: 28,
           height: 50,
           key_back_color: space_back_color,
           hilited_key_back_color: hilited_space_back_color,
@@ -228,8 +220,17 @@ preset_keyboards:
           height: 50,
         }
       - {
+          click: Keyboard_letter,
+          label: "英",
+          width: 12,
+          height: 50,
+          key_text_size: 16,
+          key_back_color: off_key_back_color,
+          hilited_key_back_color: hilited_off_key_back_color,
+        }
+      - {
           click: Return,
-          width: 14,
+          width: 16,
           height: 50,
           key_text_size: 16,
           key_back_color: enter_back_color,
@@ -250,16 +251,16 @@ preset_keyboards:
     lock: false
     keys:
       # 数字行
-      - { click: "1", label_symbol: "°", swipe_up: "°", width: 10, height: 30, key_text_size: 15, symbol_text_size: 9, key_text_offset_y: 4 }
-      - { click: "2", label_symbol: "¥", swipe_up: "¥", width: 10, height: 30, key_text_size: 15, symbol_text_size: 9, key_text_offset_y: 4 }
-      - { click: "3", label_symbol: "≠", swipe_up: "≠", width: 10, height: 30, key_text_size: 15, symbol_text_size: 9, key_text_offset_y: 4 }
-      - { click: "4", label_symbol: "≈", swipe_up: "≈", width: 10, height: 30, key_text_size: 15, symbol_text_size: 9, key_text_offset_y: 4 }
-      - { click: "5", label_symbol: "↑", swipe_up: "↑", width: 10, height: 30, key_text_size: 15, symbol_text_size: 9, key_text_offset_y: 4 }
-      - { click: "6", label_symbol: "↓", swipe_up: "↓", width: 10, height: 30, key_text_size: 15, symbol_text_size: 9, key_text_offset_y: 4 }
-      - { click: "7", label_symbol: "[", swipe_up: "[", width: 10, height: 30, key_text_size: 15, symbol_text_size: 9, key_text_offset_y: 4 }
-      - { click: "8", label_symbol: "]", swipe_up: "]", width: 10, height: 30, key_text_size: 15, symbol_text_size: 9, key_text_offset_y: 4 }
-      - { click: "9", label_symbol: "{", swipe_up: "{", width: 10, height: 30, key_text_size: 15, symbol_text_size: 9, key_text_offset_y: 4 }
-      - { click: "0", label_symbol: "}", swipe_up: "}", width: 10, height: 30, key_text_size: 15, symbol_text_size: 9, key_text_offset_y: 4 }
+      - { click: "1", label_symbol: "°", swipe_up: "°", width: 10, height: 40, key_text_size: 15, symbol_text_size: 9, key_text_offset_y: 4 }
+      - { click: "2", label_symbol: "¥", swipe_up: "¥", width: 10, height: 40, key_text_size: 15, symbol_text_size: 9, key_text_offset_y: 4 }
+      - { click: "3", label_symbol: "≠", swipe_up: "≠", width: 10, height: 40, key_text_size: 15, symbol_text_size: 9, key_text_offset_y: 4 }
+      - { click: "4", label_symbol: "≈", swipe_up: "≈", width: 10, height: 40, key_text_size: 15, symbol_text_size: 9, key_text_offset_y: 4 }
+      - { click: "5", label_symbol: "↑", swipe_up: "↑", width: 10, height: 40, key_text_size: 15, symbol_text_size: 9, key_text_offset_y: 4 }
+      - { click: "6", label_symbol: "↓", swipe_up: "↓", width: 10, height: 40, key_text_size: 15, symbol_text_size: 9, key_text_offset_y: 4 }
+      - { click: "7", label_symbol: "[", swipe_up: "[", width: 10, height: 40, key_text_size: 15, symbol_text_size: 9, key_text_offset_y: 4 }
+      - { click: "8", label_symbol: "]", swipe_up: "]", width: 10, height: 40, key_text_size: 15, symbol_text_size: 9, key_text_offset_y: 4 }
+      - { click: "9", label_symbol: "{", swipe_up: "{", width: 10, height: 40, key_text_size: 15, symbol_text_size: 9, key_text_offset_y: 4 }
+      - { click: "0", label_symbol: "}", swipe_up: "}", width: 10, height: 40, key_text_size: 15, symbol_text_size: 9, key_text_offset_y: 4 }
       # 字母行上标（常用符号，含 | ，参考百度风格）
       - { click: "q", label_symbol: "`", swipe_up: "`", width: 10, height: 45 }
       - { click: "w", label_symbol: "^", swipe_up: "^", width: 10, height: 45 }
@@ -282,7 +283,7 @@ preset_keyboards:
       - { click: "k", label_symbol: "*", swipe_up: "*", width: 10, height: 45 }
       - { click: "l", label_symbol: "?", swipe_up: "?", width: 10, height: 45 }
       - { width: 5, height: 45 }
-      - { click: Shift_L, send_bindings: false, width: 15, height: 45 }
+      - { click: Shift_L, long_lick: Shift_L_lock, send_bindings: false, width: 15, height: 45 }
       - { click: "z", label_symbol: "(", swipe_up: "(", width: 10, height: 45 }
       - { click: "x", label_symbol: ")", swipe_up: ")", width: 10, height: 45 }
       - { click: "c", label_symbol: "-", swipe_up: "-", width: 10, height: 45 }
@@ -300,20 +301,11 @@ preset_keyboards:
         }
       - { click: Keyboard_number_letter, width: 11, height: 50, key_text_size: 16 }
       - { click: Keyboard_symbols_letter, width: 11, height: 50, key_text_size: 16 }
-      - {
-          click: Keyboard_default,
-          label: "中",
-          width: 12,
-          height: 50,
-          key_text_size: 16,
-          key_back_color: off_key_back_color,
-          hilited_key_back_color: hilited_off_key_back_color,
-        }
       - { click: comma, label: ",", width: 10, height: 50 }
       - {
           click: space,
           swipe_up: Keyboard_default,
-          width: 30,
+          width: 28,
           height: 50,
           key_back_color: space_back_color,
           hilited_key_back_color: hilited_space_back_color,
@@ -328,10 +320,20 @@ preset_keyboards:
           height: 50,
         }
       - {
+          click: Keyboard_default,
+          label: "中",
+          width: 12,
+          height: 50,
+          key_text_size: 16,
+          key_back_color: off_key_back_color,
+          hilited_key_back_color: hilited_off_key_back_color,
+        }
+      - {
           click: Return,
           composing: Return1,
           long_click: CommitComment,
-          width: 14,
+          label_symbol: " ",
+          width: 16,
           height: 50,
           key_text_size: 16,
           key_back_color: enter_back_color,
@@ -474,7 +476,7 @@ preset_keyboards:
       - { click: Keyboard_default, width: 14, key_text_size: 16, long_click: '' }
       - { click: '。', width: 12, long_click: '' }
       - { click: BackSpace, width: 28, long_click: '', key_back_color: off_key_back_color, hilited_key_back_color: hilited_off_key_back_color }
-      - { click: Return, width: 34, long_click: select_all, key_back_color: enter_back_color, hilited_key_back_color: hilited_enter_back_color, key_text_color: enter_text_color, hilited_key_text_color: enter_text_color }
+      - { click: Return, width: 34, key_back_color: enter_back_color, hilited_key_back_color: hilited_enter_back_color, key_text_color: enter_text_color, hilited_key_text_color: enter_text_color }
 
   symbols_letter:
     __include: trime:/preset_keyboards/symbols
@@ -504,7 +506,6 @@ preset_keyboards:
       - "keys/@43/hilited_key_back_color": hilited_off_key_back_color
       - "keys/@44/click": Return
       - "keys/@44/width": 34
-      - "keys/@44/long_click": select_all
       - "keys/@44/key_back_color": enter_back_color
       - "keys/@44/hilited_key_back_color": hilited_enter_back_color
       - "keys/@44/key_text_color": enter_text_color
