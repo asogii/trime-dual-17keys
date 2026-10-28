@@ -189,7 +189,6 @@ preset_keyboards:
       - { click: t, label: "T", hint: "er ong", label_symbol: "；", swipe_up: "；", width: 17, height: 55 }
       - {
           click: BackSpace,
-          label: "⌫",
           width: 16,
           height: 55,
           key_back_color: off_key_back_color,
@@ -230,6 +229,9 @@ preset_keyboards:
         }
       - {
           click: Return,
+          composing: Return1,
+          long_click: CommitComment,
+          label_symbol: " ",
           width: 16,
           height: 50,
           key_text_size: 16,
@@ -362,6 +364,9 @@ preset_keyboards:
       - "keys/@12/click": "8"
       - "keys/@13/click": "9"
       - "keys/@17/click": "0"
+      - "keys/@19/click": BackSpace
+      - "keys/@19/key_back_color": off_key_back_color
+      - "keys/@19/hilited_key_back_color": hilited_off_key_back_color
       - "keys/@20/click": Keyboard_default
       - "keys/@20/width": 12
       - "keys/@20/key_text_size": 16
@@ -369,13 +374,14 @@ preset_keyboards:
       - "keys/@21/label": "="
       - "keys/@21/width": 12
       - "keys/@21/long_click": ""
-      - "keys/@22/click": "."
-      - "keys/@22/label": "."
+      - "keys/@22/click": ","
+      - "keys/@22/label": ","
       - "keys/@22/width": 12
       - "keys/@22/long_click": ""
       - "keys/@23/width": 30
-      - "keys/@23/key_back_color": off_key_back_color
-      - "keys/@23/hilited_key_back_color": hilited_off_key_back_color
+      - "keys/@23/click": space
+      - "keys/@23/key_back_color": space_back_color
+      - "keys/@23/hilited_key_back_color": hilited_space_back_color
       - "keys/@24/width": 34
       - "keys/@24/key_back_color": enter_back_color
       - "keys/@24/hilited_key_back_color": hilited_enter_back_color
@@ -402,6 +408,9 @@ preset_keyboards:
       - "keys/@12/click": "8"
       - "keys/@13/click": "9"
       - "keys/@17/click": "0"
+      - "keys/@19/click": BackSpace
+      - "keys/@19/key_back_color": off_key_back_color
+      - "keys/@19/hilited_key_back_color": hilited_off_key_back_color
       - "keys/@20/click": Keyboard_letter
       - "keys/@20/width": 12
       - "keys/@20/key_text_size": 16
@@ -409,13 +418,14 @@ preset_keyboards:
       - "keys/@21/label": "="
       - "keys/@21/width": 12
       - "keys/@21/long_click": ""
-      - "keys/@22/click": "."
-      - "keys/@22/label": "."
+      - "keys/@22/click": ","
+      - "keys/@22/label": ","
       - "keys/@22/width": 12
       - "keys/@22/long_click": ""
       - "keys/@23/width": 30
-      - "keys/@23/key_back_color": off_key_back_color
-      - "keys/@23/hilited_key_back_color": hilited_off_key_back_color
+      - "keys/@23/click": space
+      - "keys/@23/key_back_color": space_back_color
+      - "keys/@23/hilited_key_back_color": hilited_space_back_color
       - "keys/@24/width": 34
       - "keys/@24/key_back_color": enter_back_color
       - "keys/@24/hilited_key_back_color": hilited_enter_back_color
@@ -471,11 +481,11 @@ preset_keyboards:
       - { click: '”', long_click: '’' }
       - { click: '，' }
       - { click: '？' }
-      - { click: BackSpace, long_click: Escape, key_back_color: off_key_back_color, hilited_key_back_color: hilited_off_key_back_color }
+      - { click: BackSpace, key_back_color: off_key_back_color, hilited_key_back_color: hilited_off_key_back_color }
       - { click: '，', width: 12, long_click: '' }
       - { click: Keyboard_default, width: 14, key_text_size: 16, long_click: '' }
       - { click: '。', width: 12, long_click: '' }
-      - { click: BackSpace, width: 28, long_click: '', key_back_color: off_key_back_color, hilited_key_back_color: hilited_off_key_back_color }
+      - { click: space, width: 28, key_back_color: space_back_color, hilited_key_back_color: hilited_space_back_color }
       - { click: Return, width: 34, key_back_color: enter_back_color, hilited_key_back_color: hilited_enter_back_color, key_text_color: enter_text_color, hilited_key_text_color: enter_text_color }
 
   symbols_letter:
@@ -488,6 +498,9 @@ preset_keyboards:
     vertical_gap: 2
     lock: false
     __patch:
+      - "keys/@39/long_click": ""
+      - "keys/@39/key_back_color": off_key_back_color
+      - "keys/@39/hilited_key_back_color": hilited_off_key_back_color
       - "keys/@40/click": "，"
       - "keys/@40/label": "，"
       - "keys/@40/width": 12
@@ -499,11 +512,11 @@ preset_keyboards:
       - "keys/@42/label": "。"
       - "keys/@42/width": 12
       - "keys/@42/long_click": ""
-      - "keys/@43/click": BackSpace
+      - "keys/@43/click": space
       - "keys/@43/width": 28
       - "keys/@43/long_click": ""
-      - "keys/@43/key_back_color": off_key_back_color
-      - "keys/@43/hilited_key_back_color": hilited_off_key_back_color
+      - "keys/@43/key_back_color": space_back_color
+      - "keys/@43/hilited_key_back_color": hilited_space_back_color
       - "keys/@44/click": Return
       - "keys/@44/width": 34
       - "keys/@44/key_back_color": enter_back_color
