@@ -41,7 +41,7 @@ style:
   candidate_view_height: 32
   candidate_padding: 4
   candidate_spacing: 4
-  candidate_text_size: 18
+  candidate_text_size: 21
   comment_on_top: false
   comment_height: 16
   comment_text_size: 14
@@ -178,27 +178,27 @@ preset_keyboards:
     lock: true
     keys:
       # 上排 6 键 —— 对应万象乱序17字母
-      - { click: h, label: "HP", hint: "a ia ua", label_symbol: "1", swipe_up: "1", width: 17, height: 55, key_text_size: 21 }
-      - { click: s, label: "Sh", hint: "en in", label_symbol: "2", swipe_up: "2", width: 17, height: 55, key_text_size: 21 }
-      - { click: z, label: "Zh", hint: "ang iao", label_symbol: "3", swipe_up: "3", width: 17, height: 55, key_text_size: 21 }
-      - { click: b, label: "B", hint: "ao iong", label_symbol: "4", swipe_up: "4", width: 16, height: 55, key_text_size: 21 }
-      - { click: x, label: "oXv", hint: "uai uan", label_symbol: "5", swipe_up: "5", width: 17, height: 55, key_text_size: 21 }
-      - { click: m, label: "MS", hint: "ie uo", label_symbol: "6", swipe_up: "6", width: 16, height: 55, key_text_size: 21 }
+      - { click: h, label: "HP", hint: "a ia ua", label_symbol: "1", swipe_up: "1", width: 17, height: 55, key_text_size: 20 }
+      - { click: s, label: "Sh", hint: "en in", label_symbol: "2", swipe_up: "2", width: 17, height: 55, key_text_size: 20 }
+      - { click: z, label: "Zh", hint: "ang iao", label_symbol: "3", swipe_up: "3", width: 17, height: 55, key_text_size: 20 }
+      - { click: b, label: "B", hint: "ao iong", label_symbol: "4", swipe_up: "4", width: 16, height: 55, key_text_size: 20 }
+      - { click: x, label: "oXv", hint: "uai uan", label_symbol: "5", swipe_up: "5", width: 17, height: 55, key_text_size: 20 }
+      - { click: m, label: "MS", hint: "ie uo", label_symbol: "6", swipe_up: "6", width: 16, height: 55, key_text_size: 20 }
 
       # 中排 6 键
-      - { click: l, label: "L", hint: "ai ue", label_symbol: "7", swipe_up: "7", width: 17, height: 55, key_text_size: 21 }
-      - { click: d, label: "D", hint: "u", label_symbol: "8", swipe_up: "8", width: 17, height: 55, key_text_size: 21 }
-      - { click: y, label: "Y", hint: "eng ing", label_symbol: "9", swipe_up: "9", width: 17, height: 55, key_text_size: 21 }
-      - { click: w, label: "WZ", hint: "e", label_symbol: "0", swipe_up: "0", width: 16, height: 55, key_text_size: 21 }
-      - { click: j, label: "JK", hint: "i", label_symbol: "！", swipe_up: "！", width: 17, height: 55, key_text_size: 21 }
-      - { click: n, label: "NR", hint: "an", label_symbol: "—", swipe_up: "—", width: 16, height: 55, key_text_size: 21 }
+      - { click: l, label: "L", hint: "ai ue", label_symbol: "7", swipe_up: "7", width: 17, height: 55, key_text_size: 20 }
+      - { click: d, label: "D", hint: "u", label_symbol: "8", swipe_up: "8", width: 17, height: 55, key_text_size: 20 }
+      - { click: y, label: "Y", hint: "eng ing", label_symbol: "9", swipe_up: "9", width: 17, height: 55, key_text_size: 20 }
+      - { click: w, label: "WZ", hint: "e", label_symbol: "0", swipe_up: "0", width: 16, height: 55, key_text_size: 20 }
+      - { click: j, label: "JK", hint: "i", label_symbol: "！", swipe_up: "！", width: 17, height: 55, key_text_size: 20 }
+      - { click: n, label: "NR", hint: "an", label_symbol: "—", swipe_up: "—", width: 16, height: 55, key_text_size: 20 }
 
       # 下排 5 键 + 退格
-      - { click: c, label: "Ch", hint: "iang ui", label_symbol: "（", swipe_up: "（", width: 17, height: 55, key_text_size: 21 }
-      - { click: q, label: "Q~", hint: "ian uang", label_symbol: "）", swipe_up: "）", width: 17, height: 55, key_text_size: 21 }
-      - { click: g, label: "G", hint: "ei un", label_symbol: "·", swipe_up: "·", width: 17, height: 55, key_text_size: 21 }
-      - { click: f, label: "FC", hint: "iu ou", label_symbol: "：", swipe_up: "：", width: 16, height: 55, key_text_size: 21 }
-      - { click: t, label: "T", hint: "er ong", label_symbol: "；", swipe_up: "；", width: 17, height: 55, key_text_size: 21 }
+      - { click: c, label: "Ch", hint: "iang ui", label_symbol: "（", swipe_up: "（", width: 17, height: 55, key_text_size: 20 }
+      - { click: q, label: "Q~", hint: "ian uang", label_symbol: "）", swipe_up: "）", width: 17, height: 55, key_text_size: 20 }
+      - { click: g, label: "G", hint: "ei un", label_symbol: "·", swipe_up: "·", width: 17, height: 55, key_text_size: 20 }
+      - { click: f, label: "FC", hint: "iu ou", label_symbol: "：", swipe_up: "：", width: 16, height: 55, key_text_size: 20 }
+      - { click: t, label: "T", hint: "er ong", label_symbol: "；", swipe_up: "；", width: 17, height: 55, key_text_size: 20 }
       - {
           click: BackSpace,
           width: 16,
