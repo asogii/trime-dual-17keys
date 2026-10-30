@@ -190,13 +190,13 @@ preset_keyboards:
       - { click: d, label: "D", hint: "u", label_symbol: "8", swipe_up: "8", width: 17, height: 55, key_text_size: 20 }
       - { click: y, label: "Y", hint: "eng ing", label_symbol: "9", swipe_up: "9", width: 17, height: 55, key_text_size: 20 }
       - { click: w, label: "WZ", hint: "e", label_symbol: "0", swipe_up: "0", width: 16, height: 55, key_text_size: 20 }
-      - { click: j, label: "JK", hint: "i", label_symbol: "！", swipe_up: "！", width: 17, height: 55, key_text_size: 20 }
-      - { click: n, label: "NR", hint: "an", label_symbol: "—", swipe_up: "—", width: 16, height: 55, key_text_size: 20 }
+      - { click: j, label: "JK", hint: "i", label_symbol: "“", swipe_up: "“", width: 17, height: 55, key_text_size: 20 }
+      - { click: n, label: "NR", hint: "an", label_symbol: "”", swipe_up: "”", width: 16, height: 55, key_text_size: 20 }
 
       # 下排 5 键 + 退格
       - { click: c, label: "Ch", hint: "iang ui", label_symbol: "（", swipe_up: "（", width: 17, height: 55, key_text_size: 20 }
       - { click: q, label: "Q~", hint: "ian uang", label_symbol: "）", swipe_up: "）", width: 17, height: 55, key_text_size: 20 }
-      - { click: g, label: "G", hint: "ei un", label_symbol: "·", swipe_up: "·", width: 17, height: 55, key_text_size: 20 }
+      - { click: g, label: "G", hint: "ei un", label_symbol: "！", swipe_up: "！", width: 17, height: 55, key_text_size: 20 }
       - { click: f, label: "FC", hint: "iu ou", label_symbol: "：", swipe_up: "：", width: 16, height: 55, key_text_size: 20 }
       - { click: t, label: "T", hint: "er ong", label_symbol: "；", swipe_up: "；", width: 17, height: 55, key_text_size: 20 }
       - {
