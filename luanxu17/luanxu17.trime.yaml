@@ -101,7 +101,7 @@ window:
 liquid_keyboard:
   __include: trime:/liquid_keyboard
   __patch:
-    - "fixed_key_bar/position": right
+    - "fixed_key_bar/position": left
     - "fixed_key_bar/keys": [Keyboard_back, BackSpace]
 
 tool_bar:
@@ -109,20 +109,17 @@ tool_bar:
   back_style: "返回"
   buttons:
     - background: { normal: key_back_color, highlight: hilited_key_back_color, type: rectangle, corner_radius: 10, vertical_inset: 6, horizontal_inset: 2 }
-      foreground: { style: "⎘", normal: key_text_color, highlight: hilited_key_text_color, font_size: 17, padding: 6 }
-      action: clipboard_window
+      foreground: { style: "▾", normal: key_text_color, highlight: hilited_key_text_color, font_size: 17, padding: 6 }
+      action: Hide
     - background: { normal: key_back_color, highlight: hilited_key_back_color, type: rectangle, corner_radius: 10, vertical_inset: 6, horizontal_inset: 2 }
       foreground: { style: "✥", normal: key_text_color, highlight: hilited_key_text_color, font_size: 17, padding: 6 }
       action: Keyboard_cursor
     - background: { normal: key_back_color, highlight: hilited_key_back_color, type: rectangle, corner_radius: 10, vertical_inset: 6, horizontal_inset: 2 }
+      foreground: { style: "⎘", normal: key_text_color, highlight: hilited_key_text_color, font_size: 17, padding: 6 }
+      action: clipboard_window
+    - background: { normal: key_back_color, highlight: hilited_key_back_color, type: rectangle, corner_radius: 10, vertical_inset: 6, horizontal_inset: 2 }
       foreground: { style: "☺", normal: key_text_color, highlight: hilited_key_text_color, font_size: 17, padding: 6 }
       action: liquid_keyboard_emoji
-    # 透明占位项：将右侧的 Hide 按钮顶到工具栏最右边（可根据屏幕宽度微调 padding 大小）
-    - background: { normal: 0x00000000, highlight: 0x00000000, type: rectangle, vertical_inset: 6, horizontal_inset: 0 }
-      foreground: { style: " ", normal: 0x00000000, highlight: 0x00000000, font_size: 17, padding: 85 }
-    - background: { normal: key_back_color, highlight: hilited_key_back_color, type: rectangle, corner_radius: 10, vertical_inset: 6, horizontal_inset: 2 }
-      foreground: { style: "▾", normal: key_text_color, highlight: hilited_key_text_color, font_size: 17, padding: 6 }
-      action: Hide
 
 preset_keys:
   __include: trime:/preset_keys
@@ -596,10 +593,10 @@ preset_color_schemes:
     preview_text_color: 0x111111
     space_back_color: 0xF0F3F7
     hilited_space_back_color: 0xD8E0EA
-    enter_back_color: 0xD5DBE3        # 低饱和灰，与功能键同色系
+    enter_back_color: 0xD4DCE8        # 低饱和灰，与功能键同色系
     enter_text_color: 0x1C2A3A
     hilited_enter_back_color: 0xC2CBD6
-    num_key_back_color: 0xDAE0E7      # 日间数字键：低饱和中性灰，比 enter 略轻，且明显深于背景 0xE8ECF1
+    num_key_back_color: 0xDFEFEF
     hilited_num_key_back_color: 0xC8D0DA
 
   # 夜间模式
