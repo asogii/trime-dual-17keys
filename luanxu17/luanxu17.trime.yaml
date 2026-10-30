@@ -121,8 +121,7 @@ preset_keys:
   Menu: { label: 方案, send: Menu }
   BackSpace: { label: "⌫", repeatable: true, functional: true, send: BackSpace }
   Return: { label: enter_labels, functional: true, send: Return }
-  Shift_L: { label: "⇧", send: Shift_L }
-  Shift_L_lock: { label: "⇪", send: Shift_L, shift_lock: click }
+  Shift_L: { label: "⇧", send: Shift_L, shift_lock: swipe_up }
   Keyboard_default: { label: 中, functional: true, send: Eisu_toggle, select: default }
   Keyboard_letter: { label: 英, functional: true, send: Eisu_toggle, select: letter }
   Keyboard_number: { label: "123", functional: true, send: Eisu_toggle, select: number_default }
@@ -285,7 +284,7 @@ preset_keyboards:
       - { click: "k", label_symbol: "*", swipe_up: "*", width: 10, height: 43 }
       - { click: "l", label_symbol: "?", swipe_up: "?", width: 10, height: 43 }
       - { width: 5, height: 43 }
-      - { click: Shift_L, long_lick: Shift_L_lock, send_bindings: false, width: 15, height: 43 }
+      - { click: Shift_L, width: 15, height: 43 }
       - { click: "z", label_symbol: "(", swipe_up: "(", width: 10, height: 43 }
       - { click: "x", label_symbol: ")", swipe_up: ")", width: 10, height: 43 }
       - { click: "c", label_symbol: "-", swipe_up: "-", width: 10, height: 43 }
