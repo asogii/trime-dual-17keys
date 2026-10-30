@@ -1,0 +1,4 @@
+patch:
+  speller/algebra:
+    __patch:
+      - wanxiang_algebra:/lite/乱序17
