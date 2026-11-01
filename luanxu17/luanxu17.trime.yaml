@@ -129,6 +129,7 @@ preset_keys:
   __include: trime:/preset_keys
   # 覆盖内置 preset_keys 中的悬空 mini 引用，消除 [W009] 警告
   Keyboard_mini: { label: 迷你, functional: true, send: Eisu_toggle, select: default }
+  IME_switch: { label: " ", send: LANGUAGE_SWITCH }
   Hide: { label: "▼", send: BACK }
   space: { label: "␣", repeatable: true, send: space }
   BackSpace: { label: "⌫", repeatable: true, functional: true, send: BackSpace }
@@ -201,6 +202,7 @@ preset_keyboards:
       - { click: t, label: "T", hint: "er ong", label_symbol: "；", swipe_up: "；", width: 17, height: 55, key_text_size: 20 }
       - {
           click: BackSpace,
+          swipe_left: Escape,
           width: 16,
           height: 55,
           key_back_color: off_key_back_color,
@@ -208,13 +210,13 @@ preset_keyboards:
         }
 
       # 底栏
-      - { click: Keyboard_symbols_default, width: 11, height: 50, key_text_size: 16 }
+      - { click: Keyboard_symbols_default, width: 15, height: 50, key_text_size: 16 }
       - { click: Keyboard_number, width: 11, height: 50, key_text_size: 16 }
       - { click: comma, label: "，", label_symbol: "、", swipe_up: "、", width: 10, height: 50 }
       - {
           click: space,
           swipe_up: Keyboard_letter,
-          width: 28,
+          width: 24,
           height: 50,
           key_back_color: space_back_color,
           hilited_key_back_color: hilited_space_back_color,
@@ -222,7 +224,6 @@ preset_keyboards:
       - {
           click: period,
           label: "。",
-          long_click: "？",
           label_symbol: "？",
           swipe_up: "？",
           hint: "…",
@@ -232,6 +233,7 @@ preset_keyboards:
         }
       - {
           click: Keyboard_letter,
+          long_click: IME_switch,
           label: "英",
           width: 12,
           height: 50,
@@ -265,10 +267,10 @@ preset_keyboards:
     lock: true
     keys:
       # 数字行（字号 17）
-      - { click: "1", label_symbol: "°", swipe_up: "°", width: 10, height: 36, key_text_size: 17, symbol_text_size: 10, key_text_offset_y: 4, key_back_color: num_key_back_color, hilited_key_back_color: hilited_num_key_back_color }
-      - { click: "2", label_symbol: "¥", swipe_up: "¥", width: 10, height: 36, key_text_size: 17, symbol_text_size: 10, key_text_offset_y: 4, key_back_color: num_key_back_color, hilited_key_back_color: hilited_num_key_back_color }
-      - { click: "3", label_symbol: "≠", swipe_up: "≠", width: 10, height: 36, key_text_size: 17, symbol_text_size: 10, key_text_offset_y: 4, key_back_color: num_key_back_color, hilited_key_back_color: hilited_num_key_back_color }
-      - { click: "4", label_symbol: "≈", swipe_up: "≈", width: 10, height: 36, key_text_size: 17, symbol_text_size: 10, key_text_offset_y: 4, key_back_color: num_key_back_color, hilited_key_back_color: hilited_num_key_back_color }
+      - { click: "1", label_symbol: "≠", swipe_up: "≠", width: 10, height: 36, key_text_size: 17, symbol_text_size: 10, key_text_offset_y: 4, key_back_color: num_key_back_color, hilited_key_back_color: hilited_num_key_back_color }
+      - { click: "2", label_symbol: "≈", swipe_up: "≈", width: 10, height: 36, key_text_size: 17, symbol_text_size: 10, key_text_offset_y: 4, key_back_color: num_key_back_color, hilited_key_back_color: hilited_num_key_back_color }
+      - { click: "3", label_symbol: "http://", swipe_up: "http://", width: 10, height: 36, key_text_size: 17, symbol_text_size: 10, key_text_offset_y: 4, key_back_color: num_key_back_color, hilited_key_back_color: hilited_num_key_back_color }
+      - { click: "4", label_symbol: ".com", swipe_up: ".com", width: 10, height: 36, key_text_size: 17, symbol_text_size: 10, key_text_offset_y: 4, key_back_color: num_key_back_color, hilited_key_back_color: hilited_num_key_back_color }
       - { click: "5", label_symbol: "↑", swipe_up: "↑", width: 10, height: 36, key_text_size: 17, symbol_text_size: 10, key_text_offset_y: 4, key_back_color: num_key_back_color, hilited_key_back_color: hilited_num_key_back_color }
       - { click: "6", label_symbol: "↓", swipe_up: "↓", width: 10, height: 36, key_text_size: 17, symbol_text_size: 10, key_text_offset_y: 4, key_back_color: num_key_back_color, hilited_key_back_color: hilited_num_key_back_color }
       - { click: "7", label_symbol: "[", swipe_up: "[", width: 10, height: 36, key_text_size: 17, symbol_text_size: 10, key_text_offset_y: 4, key_back_color: num_key_back_color, hilited_key_back_color: hilited_num_key_back_color }
@@ -299,7 +301,7 @@ preset_keyboards:
       - { click: "l", label_symbol: "?", swipe_up: "?", width: 10, height: 43, key_text_size: 24, key_text_offset_y: 5.5 }
       - { width: 5, height: 43 }
       # 字母第三行（Shift 键上标 caps，单击单字大写，上滑锁定大写）
-      - { click: Shift_L, label_symbol: "caps", swipe_up: Shift_Lock, symbol_text_size: 10, width: 10, height: 43, key_text_offset_y: 5.5 }
+      - { click: Shift_L, label_symbol: "caps", swipe_up: Shift_Lock, symbol_text_size: 10, width: 15, height: 43, key_text_offset_y: 5.5 }
       - { click: "z", label_symbol: "(", swipe_up: "(", width: 10, height: 43, key_text_size: 24, key_text_offset_y: 5.5 }
       - { click: "x", label_symbol: ")", swipe_up: ")", width: 10, height: 43, key_text_size: 24, key_text_offset_y: 5.5 }
       - { click: "c", label_symbol: "-", swipe_up: "-", width: 10, height: 43, key_text_size: 24, key_text_offset_y: 5.5 }
@@ -310,19 +312,19 @@ preset_keyboards:
       - {
           click: BackSpace,
           swipe_left: Escape,
-          width: 20,
+          width: 15,
           height: 43,
           key_back_color: off_key_back_color,
           hilited_key_back_color: hilited_off_key_back_color,
         }
       # 底栏
-      - { click: Keyboard_symbols_letter, width: 11, height: 50, key_text_size: 16 }
+      - { click: Keyboard_symbols_letter, width: 15, height: 50, key_text_size: 16 }
       - { click: Keyboard_number, width: 11, height: 50, key_text_size: 16 }
       - { click: comma, label: ",", width: 10, height: 50 }
       - {
           click: space,
           swipe_up: Keyboard_default,
-          width: 28,
+          width: 24,
           height: 50,
           key_back_color: space_back_color,
           hilited_key_back_color: hilited_space_back_color,
@@ -330,7 +332,6 @@ preset_keyboards:
       - {
           click: period,
           label: ".",
-          long_click: "?",
           label_symbol: "?",
           swipe_up: "?",
           width: 12,
@@ -338,6 +339,7 @@ preset_keyboards:
         }
       - {
           click: Keyboard_default,
+          long_click: IME_switch,
           label: "中",
           width: 12,
           height: 50,
@@ -379,7 +381,7 @@ preset_keyboards:
       - { click: "2", width: 20, height: 55, key_text_size: 23}
       - { click: "3", width: 20, height: 55, key_text_size: 23}
       - { width: 3, height: 55 }
-      - { click: BackSpace, width: 17, height: 55, key_text_size: 20, key_back_color: off_key_back_color, hilited_key_back_color: hilited_off_key_back_color }
+      - { click: BackSpace, swipe_left: Escape, width: 17, height: 55, key_text_size: 20, key_back_color: off_key_back_color, hilited_key_back_color: hilited_off_key_back_color }
 
       # 第 2 行：- | 间距 | 4 5 6 | 间距 | / (上滑 %)
       - { click: "-", width: 17, height: 55 }
@@ -397,12 +399,12 @@ preset_keyboards:
       - { click: "8", width: 20, height: 55, key_text_size: 23}
       - { click: "9", width: 20, height: 55, key_text_size: 23}
       - { width: 3, height: 55 }
-      - { click: "=", label: "=", label_symbol: ":", swipe_up: ":", width: 17, height: 55 }
+      - { click: ":", label: ":", label_symbol: "=", swipe_up: "=", width: 17, height: 55 }
 
       # 第 4 行：返回 | 间距 | , 0 . | 间距 | 回车
-      - { click: Keyboard_back, width: 17, height: 50, key_text_size: 16, key_back_color: off_key_back_color, hilited_key_back_color: hilited_off_key_back_color }
+      - { click: ",", label: ",", label_symbol: ";", swipe_up: ";", width: 17, height: 50 }
       - { width: 3, height: 50 }
-      - { click: ",", label: ",", label_symbol: ";", swipe_up: ";", width: 20, height: 50 }
+      - { click: Keyboard_back, width: 20, height: 50, key_text_size: 16, key_back_color: off_key_back_color, hilited_key_back_color: hilited_off_key_back_color }
       - { click: "0", width: 20, height: 50, key_text_size: 23}
       - { click: ".", label: ".", label_symbol: "#", swipe_up: "#", width: 20, height: 50 }
       - { width: 3, height: 50 }
@@ -413,7 +415,7 @@ preset_keyboards:
     author: asogii
     ascii_mode: 0
     width: 10
-    height: 44
+    height: 43
     key_text_size: 20
     horizontal_gap: 2
     vertical_gap: 2
@@ -452,13 +454,13 @@ preset_keyboards:
       - { click: '＋', key_text_offset_y: 4 }
       - { click: '－', long_click: '_', key_text_offset_y: 4 }
       - { click: '＝', key_text_offset_y: 4 }
-      - { click: '〈', long_click: '《', key_text_offset_y: 4 }
-      - { click: '〉', long_click: '》', key_text_offset_y: 4 }
+      - { click: '《', long_click: '〈', key_text_offset_y: 4 }
+      - { click: '》', long_click: '〉', key_text_offset_y: 4 }
       - { click: '“', long_click: '‘', key_text_offset_y: 4 }
       - { click: '”', long_click: '’', key_text_offset_y: 4 }
       - { click: '？', key_text_offset_y: 4 }
-      - { click: BackSpace, width: 20, key_back_color: off_key_back_color, hilited_key_back_color: hilited_off_key_back_color }
-      - { click: Keyboard_default, label: "返回", width: 14, key_text_size: 16, long_click: '' }
+      - { click: BackSpace, swipe_left: Escape, width: 20, key_back_color: off_key_back_color, hilited_key_back_color: hilited_off_key_back_color }
+      - { click: Keyboard_back, width: 14, key_text_size: 16, key_back_color: off_key_back_color, hilited_key_back_color: hilited_off_key_back_color }
       - { click: '，', width: 12, long_click: '' }
       - { click: space, width: 28, key_back_color: space_back_color, hilited_key_back_color: hilited_space_back_color }
       - { click: '。', width: 12, long_click: '' }
@@ -470,7 +472,7 @@ preset_keyboards:
     ascii_mode: 1
     reset_ascii_mode: true
     width: 10
-    height: 44
+    height: 43
     key_text_size: 20
     horizontal_gap: 2
     vertical_gap: 2
@@ -515,10 +517,10 @@ preset_keyboards:
       - { click: "'", long_click: '’', key_text_offset_y: 4 }
       - { click: '?', key_text_offset_y: 4 }
       - { click: BackSpace, width: 20, key_back_color: off_key_back_color, hilited_key_back_color: hilited_off_key_back_color }
-      - { click: Keyboard_letter, label: "返回", width: 14, key_text_size: 16 }
-      - { click: '，', label: '，', width: 12 }
+      - { click: Keyboard_back, width: 14, key_text_size: 16, key_back_color: off_key_back_color, hilited_key_back_color: hilited_off_key_back_color }
+      - { click: ',', label: ',', width: 12 }
       - { click: space, width: 28, key_back_color: space_back_color, hilited_key_back_color: hilited_space_back_color }
-      - { click: '。', label: '。', width: 12 }
+      - { click: '.', label: '.', width: 12 }
       - { click: Return, width: 34, key_text_size: 16, key_back_color: enter_back_color, hilited_key_back_color: hilited_enter_back_color, key_text_color: enter_text_color, hilited_key_text_color: enter_text_color }
 
   # 光标编辑键盘（一共 3 行，单行高 72，方向键使用独立强调色 arrow_key_back_color）
@@ -538,7 +540,7 @@ preset_keyboards:
       - { click: Home, width: 20, height: 72 }
       - { click: Up, width: 20, height: 72, key_back_color: arrow_key_back_color, hilited_key_back_color: hilited_arrow_key_back_color }
       - { click: End, width: 20, height: 72 }
-      - { click: BackSpace, width: 20, height: 72, key_back_color: off_key_back_color, hilited_key_back_color: hilited_off_key_back_color }
+      - { click: BackSpace, swipe_left: Escape, width: 20, height: 72, key_back_color: off_key_back_color, hilited_key_back_color: hilited_off_key_back_color }
 
       # 第 2 行：全选 | ◀ | 选择(锁定Shift配合方向键选词) | ▶ | 粘贴
       - { click: select_all, width: 20, height: 72, key_back_color: off_key_back_color, hilited_key_back_color: hilited_off_key_back_color }
