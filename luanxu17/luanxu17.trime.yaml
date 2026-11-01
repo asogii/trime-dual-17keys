@@ -211,7 +211,7 @@ preset_keyboards:
 
       # 底栏
       - { click: Keyboard_symbols_default, width: 15, height: 50, key_text_size: 16 }
-      - { click: Keyboard_number, width: 11, height: 50, key_text_size: 16 }
+      - { click: Keyboard_number, width: 13, height: 50, key_text_size: 16 }
       - { click: comma, label: "，", label_symbol: "、", swipe_up: "、", width: 10, height: 50 }
       - {
           click: space,
@@ -228,7 +228,7 @@ preset_keyboards:
           swipe_up: "？",
           hint: "…",
           swipe_down: "…",
-          width: 12,
+          width: 10,
           height: 50,
         }
       - {
@@ -319,7 +319,7 @@ preset_keyboards:
         }
       # 底栏
       - { click: Keyboard_symbols_letter, width: 15, height: 50, key_text_size: 16 }
-      - { click: Keyboard_number, width: 11, height: 50, key_text_size: 16 }
+      - { click: Keyboard_number, width: 13, height: 50, key_text_size: 16 }
       - { click: comma, label: ",", width: 10, height: 50 }
       - {
           click: space,
@@ -334,7 +334,7 @@ preset_keyboards:
           label: ".",
           label_symbol: "?",
           swipe_up: "?",
-          width: 12,
+          width: 10,
           height: 50,
         }
       - {
