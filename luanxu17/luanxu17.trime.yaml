@@ -460,11 +460,11 @@ preset_keyboards:
       - { click: '”', long_click: '’', key_text_offset_y: 4 }
       - { click: '？', key_text_offset_y: 4 }
       - { click: BackSpace, swipe_left: Escape, width: 20, key_back_color: off_key_back_color, hilited_key_back_color: hilited_off_key_back_color }
-      - { click: Keyboard_back, width: 14, key_text_size: 16, key_back_color: off_key_back_color, hilited_key_back_color: hilited_off_key_back_color }
+      - { click: Keyboard_back, width: 20, key_text_size: 16, key_back_color: off_key_back_color, hilited_key_back_color: hilited_off_key_back_color }
       - { click: '，', width: 12, long_click: '' }
-      - { click: space, width: 28, key_back_color: space_back_color, hilited_key_back_color: hilited_space_back_color }
+      - { click: space, width: 32, key_back_color: space_back_color, hilited_key_back_color: hilited_space_back_color }
       - { click: '。', width: 12, long_click: '' }
-      - { click: Return, width: 34, key_text_size: 16, key_back_color: enter_back_color, hilited_key_back_color: hilited_enter_back_color, key_text_color: enter_text_color, hilited_key_text_color: enter_text_color }
+      - { click: Return, width: 24, key_text_size: 16, key_back_color: enter_back_color, hilited_key_back_color: hilited_enter_back_color, key_text_color: enter_text_color, hilited_key_text_color: enter_text_color }
 
   symbols_letter:
     name: 英文符号
@@ -517,11 +517,11 @@ preset_keyboards:
       - { click: "'", long_click: '’', key_text_offset_y: 4 }
       - { click: '?', key_text_offset_y: 4 }
       - { click: BackSpace, width: 20, key_back_color: off_key_back_color, hilited_key_back_color: hilited_off_key_back_color }
-      - { click: Keyboard_back, width: 14, key_text_size: 16, key_back_color: off_key_back_color, hilited_key_back_color: hilited_off_key_back_color }
+      - { click: Keyboard_back, width: 20, key_text_size: 16, key_back_color: off_key_back_color, hilited_key_back_color: hilited_off_key_back_color }
       - { click: ',', label: ',', width: 12 }
-      - { click: space, width: 28, key_back_color: space_back_color, hilited_key_back_color: hilited_space_back_color }
+      - { click: space, width: 32, key_back_color: space_back_color, hilited_key_back_color: hilited_space_back_color }
       - { click: '.', label: '.', width: 12 }
-      - { click: Return, width: 34, key_text_size: 16, key_back_color: enter_back_color, hilited_key_back_color: hilited_enter_back_color, key_text_color: enter_text_color, hilited_key_text_color: enter_text_color }
+      - { click: Return, width: 24, key_text_size: 16, key_back_color: enter_back_color, hilited_key_back_color: hilited_enter_back_color, key_text_color: enter_text_color, hilited_key_text_color: enter_text_color }
 
   # 光标编辑键盘（一共 3 行，单行高 72，方向键使用独立强调色 arrow_key_back_color）
   cursor:
