@@ -273,8 +273,8 @@ preset_keyboards:
       - { click: "4", label_symbol: ".com", swipe_up: ".com", width: 10, height: 36, key_text_size: 17, symbol_text_size: 10, key_text_offset_y: 4, key_back_color: num_key_back_color, hilited_key_back_color: hilited_num_key_back_color }
       - { click: "5", label_symbol: "↑", swipe_up: "↑", width: 10, height: 36, key_text_size: 17, symbol_text_size: 10, key_text_offset_y: 4, key_back_color: num_key_back_color, hilited_key_back_color: hilited_num_key_back_color }
       - { click: "6", label_symbol: "↓", swipe_up: "↓", width: 10, height: 36, key_text_size: 17, symbol_text_size: 10, key_text_offset_y: 4, key_back_color: num_key_back_color, hilited_key_back_color: hilited_num_key_back_color }
-      - { click: "7", label_symbol: "[", swipe_up: "[", width: 10, height: 36, key_text_size: 17, symbol_text_size: 10, key_text_offset_y: 4, key_back_color: num_key_back_color, hilited_key_back_color: hilited_num_key_back_color }
-      - { click: "8", label_symbol: "]", swipe_up: "]", width: 10, height: 36, key_text_size: 17, symbol_text_size: 10, key_text_offset_y: 4, key_back_color: num_key_back_color, hilited_key_back_color: hilited_num_key_back_color }
+      - { click: "7", label_symbol: "[", swipe_up: "[", long_click: "", width: 10, height: 36, key_text_size: 17, symbol_text_size: 10, key_text_offset_y: 4, key_back_color: num_key_back_color, hilited_key_back_color: hilited_num_key_back_color }
+      - { click: "8", label_symbol: "]", swipe_up: "]", long_click: "", width: 10, height: 36, key_text_size: 17, symbol_text_size: 10, key_text_offset_y: 4, key_back_color: num_key_back_color, hilited_key_back_color: hilited_num_key_back_color }
       - { click: "9", label_symbol: "{", swipe_up: "{", width: 10, height: 36, key_text_size: 17, symbol_text_size: 10, key_text_offset_y: 4, key_back_color: num_key_back_color, hilited_key_back_color: hilited_num_key_back_color }
       - { click: "0", label_symbol: "}", swipe_up: "}", width: 10, height: 36, key_text_size: 17, symbol_text_size: 10, key_text_offset_y: 4, key_back_color: num_key_back_color, hilited_key_back_color: hilited_num_key_back_color }
       # 字母第一行
@@ -411,59 +411,58 @@ preset_keyboards:
       - { click: Return, width: 17, height: 50, key_text_size: 16, key_back_color: enter_back_color, hilited_key_back_color: hilited_enter_back_color, key_text_color: enter_text_color, hilited_key_text_color: enter_text_color }
 
   symbols_default:
-    name: 符号
+    name: 中文符号
     author: asogii
-    ascii_mode: 0
+    ascii_mode: 1
+    reset_ascii_mode: true
     width: 10
-    height: 43
+    height: 52
     key_text_size: 20
+    symbol_text_size: 12
     horizontal_gap: 2
     vertical_gap: 2
     lock: false
     keys:
-      - { click: '1' }
-      - { click: '2' }
-      - { click: '3' }
-      - { click: '4' }
-      - { click: '5' }
-      - { click: '6' }
-      - { click: '7' }
-      - { click: '8' }
-      - { click: '9' }
-      - { click: '0' }
-      - { click: '～', long_click: '`', key_text_offset_y: 4 }
-      - { click: '！', key_text_offset_y: 4 }
-      - { click: '＠', key_text_offset_y: 4 }
-      - { click: '＃', key_text_offset_y: 4 }
-      - { click: '＄', key_text_offset_y: 4 }
-      - { click: '￥', key_text_offset_y: 4 }
-      - { click: '％', key_text_offset_y: 4 }
-      - { click: '＾', key_text_offset_y: 4 }
-      - { click: '＆', key_text_offset_y: 4 }
-      - { click: '＊', key_text_offset_y: 4 }
-      - { click: '（', long_click: '{', key_text_offset_y: 4 }
-      - { click: '）', long_click: '}', key_text_offset_y: 4 }
-      - { click: '【', long_click: '[', key_text_offset_y: 4 }
-      - { click: '】', long_click: ']', key_text_offset_y: 4 }
-      - { click: '「', long_click: '『', key_text_offset_y: 4 }
-      - { click: '」', long_click: '』', key_text_offset_y: 4 }
-      - { click: '、', long_click: '|', key_text_offset_y: 4 }
-      - { click: '／', long_click: '√', key_text_offset_y: 4 }
-      - { click: '：', key_text_offset_y: 4 }
-      - { click: '；', key_text_offset_y: 4 }
-      - { click: '＋', key_text_offset_y: 4 }
-      - { click: '－', long_click: '_', key_text_offset_y: 4 }
-      - { click: '＝', key_text_offset_y: 4 }
-      - { click: '《', long_click: '〈', key_text_offset_y: 4 }
-      - { click: '》', long_click: '〉', key_text_offset_y: 4 }
-      - { click: '“', long_click: '‘', key_text_offset_y: 4 }
-      - { click: '”', long_click: '’', key_text_offset_y: 4 }
-      - { click: '？', key_text_offset_y: 4 }
+      # 第 1 行：核心标点、成对引号/括号、省略与波浪号
+      - { click: '！', label_symbol: '✓', swipe_up: '✓' }
+      - { click: '？', label_symbol: '✗', swipe_up: '✗' }
+      - { click: '“', label_symbol: '‘', swipe_up: '‘' }
+      - { click: '”', label_symbol: '’', swipe_up: '’' }
+      - { click: '《', label_symbol: '〈', swipe_up: '〈' }
+      - { click: '》', label_symbol: '〉', swipe_up: '〉' }
+      - { click: '（', label_symbol: '↑', swipe_up: '↑' }
+      - { click: '）', label_symbol: '↓', swipe_up: '↓' }
+      - { click: '……', label_symbol: '…', swipe_up: '…' }
+      - { click: '～', label_symbol: '≈', swipe_up: '≈' }
+
+      # 第 2 行：点号、四则/逻辑运算与货币符号（中英完全同位）
+      - { click: '、', label_symbol: '·', swipe_up: '·' }
+      - { click: '：', label_symbol: '°', swipe_up: '°' }
+      - { click: '；', label_symbol: '℃', swipe_up: '℃' }
+      - { click: '/', label_symbol: '÷', swipe_up: '÷' }
+      - { click: '+', label_symbol: '±', swipe_up: '±' }
+      - { click: '-', label_symbol: '—', swipe_up: '—' }
+      - { click: '=', label_symbol: '≠', swipe_up: '≠' }
+      - { click: '%', label_symbol: '‰', swipe_up: '‰' }
+      - { click: '￥', label_symbol: '$', swipe_up: '$' }
+      - { click: '&', label_symbol: '|', swipe_up: '|' }
+
+      # 第 3 行：方头/直角括号、常用标记符号 + 退格
+      - { click: '【', label_symbol: '←', swipe_up: '←' }
+      - { click: '】', label_symbol: '→', swipe_up: '→' }
+      - { click: '「', label_symbol: '『', swipe_up: '『' }
+      - { click: '」', label_symbol: '』', swipe_up: '』' }
+      - { click: '@', label_symbol: '★', swipe_up: '★' }
+      - { click: '#', label_symbol: '※', swipe_up: '※' }
+      - { click: '*', label_symbol: '×', swipe_up: '×' }
+      - { click: '——', label_symbol: '_', swipe_up: '_' }
       - { click: BackSpace, swipe_left: Escape, width: 20, key_back_color: off_key_back_color, hilited_key_back_color: hilited_off_key_back_color }
+
+      # 第 4 行：底栏
       - { click: Keyboard_back, width: 20, key_text_size: 16, key_back_color: off_key_back_color, hilited_key_back_color: hilited_off_key_back_color }
-      - { click: '，', width: 12, long_click: '' }
+      - { click: '，', label_symbol: '≤', swipe_up: '≤', width: 12 }
       - { click: space, width: 32, key_back_color: space_back_color, hilited_key_back_color: hilited_space_back_color }
-      - { click: '。', width: 12, long_click: '' }
+      - { click: '。', label_symbol: '≥', swipe_up: '≥', width: 12 }
       - { click: Return, width: 24, key_text_size: 16, key_back_color: enter_back_color, hilited_key_back_color: hilited_enter_back_color, key_text_color: enter_text_color, hilited_key_text_color: enter_text_color }
 
   symbols_letter:
@@ -472,55 +471,53 @@ preset_keyboards:
     ascii_mode: 1
     reset_ascii_mode: true
     width: 10
-    height: 43
+    height: 52
     key_text_size: 20
+    symbol_text_size: 12
     horizontal_gap: 2
     vertical_gap: 2
     lock: false
     keys:
-      - { click: '1' }
-      - { click: '2' }
-      - { click: '3' }
-      - { click: '4' }
-      - { click: '5' }
-      - { click: '6' }
-      - { click: '7' }
-      - { click: '8' }
-      - { click: '9' }
-      - { click: '0' }
-      - { click: '~', long_click: '`', key_text_offset_y: 4 }
-      - { click: '!', key_text_offset_y: 4 }
-      - { click: '@', key_text_offset_y: 4 }
-      - { click: '#', key_text_offset_y: 4 }
-      - { click: '$', key_text_offset_y: 4 }
-      - { click: '￥', key_text_offset_y: 4 }
-      - { click: '%', key_text_offset_y: 4 }
-      - { click: '^', key_text_offset_y: 4 }
-      - { click: '&', key_text_offset_y: 4 }
-      - { click: '*', key_text_offset_y: 4 }
-      - { click: '(', long_click: '{', key_text_offset_y: 4 }
-      - { click: ')', long_click: '}', key_text_offset_y: 4 }
-      - { click: '[', long_click: '【', key_text_offset_y: 4 }
-      - { click: ']', long_click: '】', key_text_offset_y: 4 }
-      - { click: '{', long_click: '「', key_text_offset_y: 4 }
-      - { click: '}', long_click: '」', key_text_offset_y: 4 }
-      - { click: "\\", long_click: '|', key_text_offset_y: 4 }
-      - { click: '/', long_click: '√', key_text_offset_y: 4 }
-      - { click: ':', key_text_offset_y: 4 }
-      - { click: ';', key_text_offset_y: 4 }
-      - { click: '+', key_text_offset_y: 4 }
-      - { click: '-', long_click: '_', key_text_offset_y: 4 }
-      - { click: '=', key_text_offset_y: 4 }
-      - { click: '<', long_click: '《', key_text_offset_y: 4 }
-      - { click: '>', long_click: '》', key_text_offset_y: 4 }
-      - { click: '"', long_click: '“', key_text_offset_y: 4 }
-      - { click: "'", long_click: '’', key_text_offset_y: 4 }
-      - { click: '?', key_text_offset_y: 4 }
-      - { click: BackSpace, width: 20, key_back_color: off_key_back_color, hilited_key_back_color: hilited_off_key_back_color }
+      # 第 1 行：核心标点、成对引号/括号、反引号与波浪号
+      - { click: '!', label_symbol: '✓', swipe_up: '✓' }
+      - { click: '?', label_symbol: '✗', swipe_up: '✗' }
+      - { click: '"', label_symbol: '“', swipe_up: '“' }
+      - { click: "'", label_symbol: '”', swipe_up: '”' }
+      - { click: '<', label_symbol: '‘', swipe_up: '‘' }
+      - { click: '>', label_symbol: '’', swipe_up: '’' }
+      - { click: '(', label_symbol: '↑', swipe_up: '↑' }
+      - { click: ')', label_symbol: '↓', swipe_up: '↓' }
+      - { click: '`', label_symbol: '...', swipe_up: '...' }
+      - { click: '~', label_symbol: '≈', swipe_up: '≈' }
+
+      # 第 2 行：点号、四则/逻辑运算与货币符号（中英完全同位）
+      - { click: '\\', label_symbol: '·', swipe_up: '·' }
+      - { click: ':', label_symbol: '°', swipe_up: '°' }
+      - { click: ';', label_symbol: '℃', swipe_up: '℃' }
+      - { click: '/', label_symbol: '÷', swipe_up: '÷' }
+      - { click: '+', label_symbol: '±', swipe_up: '±' }
+      - { click: '-', label_symbol: '—', swipe_up: '—' }
+      - { click: '=', label_symbol: '≠', swipe_up: '≠' }
+      - { click: '%', label_symbol: '‰', swipe_up: '‰' }
+      - { click: '$', label_symbol: '￥', swipe_up: '￥' }
+      - { click: '&', label_symbol: '|', swipe_up: '|' }
+
+      # 第 3 行：方/花括号、常用标记与编程符号 + 退格
+      - { click: '[', label_symbol: '←', swipe_up: '←' }
+      - { click: ']', label_symbol: '→', swipe_up: '→' }
+      - { click: '{', label_symbol: '√', swipe_up: '√' }
+      - { click: '}', label_symbol: '∞', swipe_up: '∞' }
+      - { click: '@', label_symbol: '★', swipe_up: '★' }
+      - { click: '#', label_symbol: '※', swipe_up: '※' }
+      - { click: '*', label_symbol: '×', swipe_up: '×' }
+      - { click: '_', label_symbol: '^', swipe_up: '^' }
+      - { click: BackSpace, swipe_left: Escape, width: 20, key_back_color: off_key_back_color, hilited_key_back_color: hilited_off_key_back_color }
+
+      # 第 4 行：底栏
       - { click: Keyboard_back, width: 20, key_text_size: 16, key_back_color: off_key_back_color, hilited_key_back_color: hilited_off_key_back_color }
-      - { click: ',', label: ',', width: 12 }
+      - { click: ',', label_symbol: '≤', swipe_up: '≤', width: 12 }
       - { click: space, width: 32, key_back_color: space_back_color, hilited_key_back_color: hilited_space_back_color }
-      - { click: '.', label: '.', width: 12 }
+      - { click: '.', label_symbol: '≥', swipe_up: '≥', width: 12 }
       - { click: Return, width: 24, key_text_size: 16, key_back_color: enter_back_color, hilited_key_back_color: hilited_enter_back_color, key_text_color: enter_text_color, hilited_key_text_color: enter_text_color }
 
   # 光标编辑键盘（一共 3 行，单行高 72，方向键使用独立强调色 arrow_key_back_color）
