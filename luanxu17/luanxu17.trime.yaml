@@ -113,16 +113,16 @@ tool_bar:
   back_style: "返回"
   buttons:
     - background: { normal: key_back_color, highlight: hilited_key_back_color, type: rectangle, corner_radius: 10, vertical_inset: 6, horizontal_inset: 2 }
-      foreground: { style: "▼", normal: key_text_color, highlight: hilited_key_text_color, font_size: 17, padding: 6 }
+      foreground: { style: "ic@keyboard_close", normal: key_text_color, highlight: hilited_key_text_color, padding: 6 }
       action: Hide
     - background: { normal: key_back_color, highlight: hilited_key_back_color, type: rectangle, corner_radius: 10, vertical_inset: 6, horizontal_inset: 2 }
-      foreground: { style: "✥", normal: key_text_color, highlight: hilited_key_text_color, font_size: 17, padding: 6 }
+      foreground: { style: "ic@cursor_text", normal: key_text_color, highlight: hilited_key_text_color, padding: 6 }
       action: Keyboard_cursor
     - background: { normal: key_back_color, highlight: hilited_key_back_color, type: rectangle, corner_radius: 10, vertical_inset: 6, horizontal_inset: 2 }
-      foreground: { style: "⎘", normal: key_text_color, highlight: hilited_key_text_color, font_size: 17, padding: 6 }
+      foreground: { style: "ic@clipboard", normal: key_text_color, highlight: hilited_key_text_color, padding: 6 }
       action: clipboard_window
     - background: { normal: key_back_color, highlight: hilited_key_back_color, type: rectangle, corner_radius: 10, vertical_inset: 6, horizontal_inset: 2 }
-      foreground: { style: "☺", normal: key_text_color, highlight: hilited_key_text_color, font_size: 17, padding: 6 }
+      foreground: { style: "ic@emoticon", normal: key_text_color, highlight: hilited_key_text_color, padding: 6 }
       action: liquid_keyboard_emoji
 
 preset_keys:
