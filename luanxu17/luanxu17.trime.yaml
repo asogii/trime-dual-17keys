@@ -148,8 +148,6 @@ preset_keys:
   Right: { label: "▶", repeatable: true, functional: true, send: Right }
   Home: { label: 行首, functional: true, send: Home }
   End: { label: 行尾, functional: true, send: End }
-  Page_Up: { label: 上页, repeatable: true, functional: true, send: Page_Up }
-  Page_Down: { label: 下页, repeatable: true, functional: true, send: Page_Down }
   select_all: { label: 全选, functional: true, send: Control+a }
   cut: { label: 剪切, functional: true, send: Control+x }
   copy: { label: 复制, functional: true, send: Control+c }
@@ -164,7 +162,7 @@ preset_keys:
   Keyboard_cursor: { label: 光标, functional: true, send: Eisu_toggle, select: cursor }
   clipboard_window: { label: 剪贴, send: function, command: clipboard_window, option: "0" }
   liquid_keyboard_emoji: { label: 表情, send: function, command: liquid_keyboard, option: "emoji" }
-  # 字母键盘数字键：使用 commit 直接上屏，不受 Shift / Caps Lock 影响
+  # 字母键盘数字与标点键：使用 commit 直接上屏，不受 Shift / Caps Lock 影响
   Num_1: { label: "1", commit: "1" }
   Num_2: { label: "2", commit: "2" }
   Num_3: { label: "3", commit: "3" }
@@ -175,6 +173,8 @@ preset_keys:
   Num_8: { label: "8", commit: "8" }
   Num_9: { label: "9", commit: "9" }
   Num_0: { label: "0", commit: "0" }
+  En_Comma: { label: ",", commit: "," }
+  En_Period: { label: ".", commit: "." }
 
 preset_keyboards:
   default:
@@ -331,7 +331,7 @@ preset_keyboards:
       # 底栏
       - { click: Keyboard_symbols_letter, width: 15, height: 50, key_text_size: 16 }
       - { click: Keyboard_number, width: 13, height: 50, key_text_size: 16 }
-      - { click: comma, label: ",", width: 10, height: 50 }
+      - { click: En_Comma, width: 10, height: 50 }
       - {
           click: space,
           swipe_up: Keyboard_default,
@@ -341,8 +341,7 @@ preset_keyboards:
           hilited_key_back_color: hilited_space_back_color,
         }
       - {
-          click: period,
-          label: ".",
+          click: En_Period,
           label_symbol: "?",
           swipe_up: "?",
           width: 10,
@@ -582,12 +581,11 @@ preset_keyboards:
       - { click: Right, width: 20, height: 72, key_back_color: arrow_key_back_color, hilited_key_back_color: hilited_arrow_key_back_color }
       - { click: paste, width: 20, height: 72, key_back_color: off_key_back_color, hilited_key_back_color: hilited_off_key_back_color }
 
-      # 第 3 行：剪切 + 复制(合宽20) | 上页 | ▼ | 下页 | 回车
-      - { click: cut, width: 10, height: 72, key_text_size: 15, key_back_color: off_key_back_color, hilited_key_back_color: hilited_off_key_back_color }
-      - { click: copy, width: 10, height: 72, key_text_size: 15, key_back_color: off_key_back_color, hilited_key_back_color: hilited_off_key_back_color }
-      - { click: Page_Up, width: 20, height: 72 }
+      # 第 3 行：向后删除(Delete) | 剪切 | ▼ | 复制 | 回车
+      - { click: Delete, width: 20, height: 72, key_back_color: off_key_back_color, hilited_key_back_color: hilited_off_key_back_color }
+      - { click: cut, width: 20, height: 72 }
       - { click: Down, width: 20, height: 72, key_back_color: arrow_key_back_color, hilited_key_back_color: hilited_arrow_key_back_color }
-      - { click: Page_Down, width: 20, height: 72 }
+      - { click: copy, width: 20, height: 72 }
       - {
           click: Return,
           width: 20,
